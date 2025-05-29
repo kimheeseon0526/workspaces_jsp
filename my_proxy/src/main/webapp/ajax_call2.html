@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>뉴스기사 가져오기</button>
+        <ul>
+            
+        </ul>
+    <script>
+        document.querySelector("button").addEventListener("click", e => {
+        const xhr = new XMLHttpRequest(); //xhr객체 생성
+            xhr.open("GET", "proxy");    //파일을 열어라
+            
+            xhr.onreadystatechange = () => {
+                if(xhr.status == 200 && xhr.readyState === 4) {
+                    console.log(xhr.responseXML);
+                    const data = xhr.responseXML;
+                    //console.log(data.querySelectorAll("student"));
+                    
+                    let str = "";
+                    data.querySelectorAll("item").forEach( s => {    
+                        str += `<li><a href="${s.querySelector('link').innerHTML}">
+                            ${s.querySelector("title").innerHTML.replace('<![CDATA[','').replace(']]>','')}    
+                            //cdata 때문에 주석처리되어 리스트가 출력되지 않아 cdata를 대체한다
+                        </a></li>`;
+                    });
+                    document.querySelector("ul").innerHTML += str;
+                }
+            }
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

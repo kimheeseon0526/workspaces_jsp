@@ -21,6 +21,7 @@ public class CalcServlet extends HttpServlet{
 		System.out.println(num1 + num2);
 		
 //		resp.sendRedirect("calc_form.jsp");
+//		페이지 이동(클라이언트에 응답 보낸 후 특정 url로 다시 요청)
 		
 	}
 	 

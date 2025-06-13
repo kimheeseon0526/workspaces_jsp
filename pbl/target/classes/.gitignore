@@ -1,4 +1,7 @@
-/controller/
-/mapper/
-/service/
+/domain/
 /filter/
+/mapper/
+/review_api/
+/service/
+/test/
+/util/

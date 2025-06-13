@@ -6,11 +6,10 @@
 	<typeAliases>
 		<package name="domain" />
 	</typeAliases>
-	
 	<mappers>
 		<!-- <mapper class="mapper.ReviewMapper"/>
 		<mapper class="mapper.MemberMapper"/> -->
 		<!-- 얘는 왜 쓰는 거지...?  -->
-		<package name="mapper"/>
+		<package name="mapper" />
 	</mappers>
 </configuration>

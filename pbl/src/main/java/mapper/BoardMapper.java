@@ -11,4 +11,7 @@ public interface BoardMapper {
 
 	Board selectOne();
 
+
+	void insert(Board board);
+
 }

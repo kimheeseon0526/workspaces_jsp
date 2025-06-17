@@ -14,7 +14,7 @@
 	<div class="container p-0">
 	<main>
 		<div class="clearfix py-0">
-                <a href="board_write.html" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-pen-fancy"></i> 글쓰기</a>
+                <a href="write" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-pen-fancy"></i> 글쓰기</a>
             </div>
             <div class="list-group">
                 <div class="list-group-item small">
@@ -44,11 +44,10 @@
 	                       <fmt:parseDate value="${board.regdate}" pattern="yyyy-MM-dd HH:mm:ss" var="parsedDate" />
 	                       <fmt:formatDate value="${parsedDate}" pattern="yy.MM.dd" /> 
 	                       <div class="col-1 samll"><span class="samll">${board.cnt}</span></div>
-	                       </div>
 	                   </div>
                 	</a>
                 </c:forEach>
-            </div>
+     
 </main>
 <%@ include file="../common/footer.jsp" %>
 </body>

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import domain.Board;
 import lombok.extern.slf4j.Slf4j;
 import service.BoardService;
+import util.AlertUtil;
 
 
 
@@ -23,13 +24,18 @@ public class View extends HttpServlet{
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String bno = req.getParameter("bno");
 	    
-		if(bno == null) {
-			resp.setContentType("text.html; charsset=utf-8");
-			PrintWriter pw = resp.getWriter();
-			pw.print("<script>");
-			pw.print("alert('잘못된 접근입니다');");
-			pw.print("location.href = 'list' ");
-			pw.print("</script>");
+//		if(bno == null) {
+//			resp.setContentType("text/html; charset=utf-8");
+//			PrintWriter pw = resp.getWriter();
+//			/* PrintWriter 클래스의 객체를 생성해서 출력으로 사용할 파일을 open한다. */
+//			pw.print("<script>");
+//			pw.print("alert('잘못된 접근입니다');");
+//			pw.print("location.href = 'list' ");
+//			pw.print("</script>");
+//			return;
+		if(req.getParameter("bno") == null) {
+			AlertUtil.alert("잘못된 접근!", "/board/list", req, resp);
+			//잘못된 접근이라고 alert 뜨고 보드의 리스트로 이동
 			return;
 		}
 		

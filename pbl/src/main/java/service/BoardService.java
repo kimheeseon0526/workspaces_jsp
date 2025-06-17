@@ -1,7 +1,6 @@
 package service;
 
 import java.util.List;
-
 import org.apache.ibatis.session.SqlSession;
 
 import domain.Board;
@@ -27,6 +26,15 @@ public class BoardService {
 			e.printStackTrace();
 			}
 		return null;
+	}
+
+	public void write(Board board) {
+		try(SqlSession session = MybatisUtil.getSqlSession()) {
+			BoardMapper mapper = session.getMapper(BoardMapper.class);
+			mapper.insert(board);
+		} catch (Exception e) { 
+			e.printStackTrace();
+		}
 	}
 
 }

@@ -1,6 +1,7 @@
 package controller.member;
 
 import java.io.IOException;
+import java.net.URLDecoder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -33,7 +34,15 @@ public class Login extends HttpServlet{
 		if(ret) {//로그인 성공
 			HttpSession session =  req.getSession();
 			session.setAttribute("member", new MemberService().findById(id));
-			resp.sendRedirect(req.getContextPath() + "/index");
+			
+			String url = req.getParameter("url");
+			if(url == null) {
+				resp.sendRedirect(req.getContextPath() + "/index");
+			}
+			else {
+				resp.sendRedirect(URLDecoder.decode(url, "utf-8"));
+			}
+
 			
 		}else {//로그인 실패
 			resp.sendRedirect("login?msg=login fail");

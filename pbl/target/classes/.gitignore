@@ -1,9 +1,4 @@
-/controller/
 /domain/
-/filter/
-/listener/
 /mapper/
-/review_api/
 /service/
-/test/
-/util/
+/controller/

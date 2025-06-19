@@ -1,0 +1,176 @@
+10:33:25.671 [main] INFO  Criteria - 20
+10:33:57.642 [main] INFO  Criteria - 20
+10:39:36.776 [main] INFO  sqltiming - select * from tbl_board order by bno desc limit 10 offset 1
+ {executed in 8 msec}
+10:39:36.834 [main] INFO  resultsettable - 
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+|bno  |title   |content                |id  |regdate             |moddate             |cnt |cno |
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+|3573 |0617글쓰기 |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3572 |qqwe    |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3571 |ghfhfhf |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3570 |젭알ㄹㄹ    |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3569 |6월 19일  |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3568 |6월 19일  |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3567 |젭알ㄹㄹ    |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3566 |ghfhfhf |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3565 |qqwe    |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3564 |0617글쓰기 |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+
+10:39:36.875 [main] INFO  BoardService - Board(bno=3573, title=0617글쓰기, content=<p>하아아아 ㅎ존나 힘드네</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.893 [main] INFO  BoardService - Board(bno=3572, title=qqwe, content=<p>qwewqeqewqeqw</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.893 [main] INFO  BoardService - Board(bno=3571, title=ghfhfhf, content=<p>호로로롤</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.893 [main] INFO  BoardService - Board(bno=3570, title=젭알ㄹㄹ, content=<p>젭알ㄹㄹ</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.894 [main] INFO  BoardService - Board(bno=3569, title=6월 19일, content=<p>으어어어 졸려</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.895 [main] INFO  BoardService - Board(bno=3568, title=6월 19일, content=<p>으어어어 졸려</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.895 [main] INFO  BoardService - Board(bno=3567, title=젭알ㄹㄹ, content=<p>젭알ㄹㄹ</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.895 [main] INFO  BoardService - Board(bno=3566, title=ghfhfhf, content=<p>호로로롤</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.895 [main] INFO  BoardService - Board(bno=3565, title=qqwe, content=<p>qwewqeqewqeqw</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:39:36.895 [main] INFO  BoardService - Board(bno=3564, title=0617글쓰기, content=<p>하아아아 ㅎ존나 힘드네</p>
+, id=qwe, regdate=2025-06-18 09:51:52, moddate=2025-06-18 09:51:52, cnt=0, cno=2)
+10:40:11.648 [main] INFO  sqltiming - select * from tbl_board order by bno desc limit 10 offset 1
+ {executed in 11 msec}
+10:40:11.687 [main] INFO  resultsettable - 
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+|bno  |title   |content                |id  |regdate             |moddate             |cnt |cno |
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+|3573 |0617글쓰기 |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3572 |qqwe    |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3571 |ghfhfhf |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3570 |젭알ㄹㄹ    |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3569 |6월 19일  |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3568 |6월 19일  |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3567 |젭알ㄹㄹ    |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3566 |ghfhfhf |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3565 |qqwe    |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3564 |0617글쓰기 |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+
+10:40:11.720 [main] INFO  BoardService - 0617글쓰기
+10:40:11.722 [main] INFO  BoardService - qqwe
+10:40:11.730 [main] INFO  BoardService - ghfhfhf
+10:40:11.730 [main] INFO  BoardService - 젭알ㄹㄹ
+10:40:11.730 [main] INFO  BoardService - 6월 19일
+10:40:11.730 [main] INFO  BoardService - 6월 19일
+10:40:11.730 [main] INFO  BoardService - 젭알ㄹㄹ
+10:40:11.730 [main] INFO  BoardService - ghfhfhf
+10:40:11.731 [main] INFO  BoardService - qqwe
+10:40:11.731 [main] INFO  BoardService - 0617글쓰기
+10:41:38.792 [main] INFO  sqltiming - select * from tbl_board order by bno desc limit 10 offset 1
+ {executed in 10 msec}
+10:41:38.832 [main] INFO  resultsettable - 
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+|bno  |title   |content                |id  |regdate             |moddate             |cnt |cno |
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+|3573 |0617글쓰기 |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3572 |qqwe    |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3571 |ghfhfhf |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3570 |젭알ㄹㄹ    |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3569 |6월 19일  |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3568 |6월 19일  |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3567 |젭알ㄹㄹ    |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3566 |ghfhfhf |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3565 |qqwe    |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3564 |0617글쓰기 |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|-----|--------|-----------------------|----|--------------------|--------------------|----|----|
+
+10:41:38.856 [main] INFO  BoardService - 0617글쓰기
+10:41:38.860 [main] INFO  BoardService - qqwe
+10:41:38.860 [main] INFO  BoardService - ghfhfhf
+10:41:38.862 [main] INFO  BoardService - 젭알ㄹㄹ
+10:41:38.862 [main] INFO  BoardService - 6월 19일
+10:41:38.862 [main] INFO  BoardService - 6월 19일
+10:41:38.862 [main] INFO  BoardService - 젭알ㄹㄹ
+10:41:38.863 [main] INFO  BoardService - ghfhfhf
+10:41:38.863 [main] INFO  BoardService - qqwe
+10:41:38.863 [main] INFO  BoardService - 0617글쓰기
+11:14:59.995 [main] INFO  sqltiming - select * from tbl_board 
+  	where cno = 2
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 10 msec}
+11:15:00.048 [main] INFO  resultsettable - 
+|-----|---------|-----------------------|----|--------------------|--------------------|----|----|
+|bno  |title    |content                |id  |regdate             |moddate             |cnt |cno |
+|-----|---------|-----------------------|----|--------------------|--------------------|----|----|
+|3574 |새똥이가 쓴 글 |내용                     |sae |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3573 |0617글쓰기  |<p>하아아아 ㅎ존나 힘드네</p>
+  |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3572 |qqwe     |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3571 |ghfhfhf  |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3570 |젭알ㄹㄹ     |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3569 |6월 19일   |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3568 |6월 19일   |<p>으어어어 졸려</p>
+       |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3567 |젭알ㄹㄹ     |<p>젭알ㄹㄹ</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3566 |ghfhfhf  |<p>호로로롤</p>
+          |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|3565 |qqwe     |<p>qwewqeqewqeqw</p>
+ |qwe |2025-06-18 09:51:52 |2025-06-18 09:51:52 |0   |2   |
+|-----|---------|-----------------------|----|--------------------|--------------------|----|----|
+
+11:15:00.065 [main] INFO  sqltiming - select count(*) from tbl_board where cno = 2
+ {executed in 7 msec}
+11:15:00.067 [main] INFO  resultsettable - 
+|---------|
+|count(*) |
+|---------|
+|3072     |
+|---------|
+
+11:15:00.079 [main] INFO  BoardService - 새똥이가 쓴 글
+11:15:00.082 [main] INFO  BoardService - 0617글쓰기
+11:15:00.083 [main] INFO  BoardService - qqwe
+11:15:00.083 [main] INFO  BoardService - ghfhfhf
+11:15:00.083 [main] INFO  BoardService - 젭알ㄹㄹ
+11:15:00.083 [main] INFO  BoardService - 6월 19일
+11:15:00.084 [main] INFO  BoardService - 6월 19일
+11:15:00.084 [main] INFO  BoardService - 젭알ㄹㄹ
+11:15:00.085 [main] INFO  BoardService - ghfhfhf
+11:15:00.085 [main] INFO  BoardService - qqwe
+12:14:48.537 [main] INFO  PageDto - PageDto(cri=Criteria(page=1, amount=10, cno=0), total=1234, start=1, end=10, left=false, right=false, doubleLeft=false, doubleRight=false)

@@ -22,7 +22,7 @@
 					<option>100개씩 보기</option>
 				</select>
 			</div>
-			<form class="col input-group">
+			<form class="col input-group search-form">
 				<select class="form-select form-select-sm" name="type">
 					<option value="T">제목</option>
 					<option value="C">내용</option>
@@ -38,8 +38,15 @@
 			  <input type="hidden" name="cno" value="${pageDto.cri.cno}">
 			  <button class="btn btn-success btn-sm" type="submit">Go</button>
 			</form>
+			<script>
+			$(".search-form").submit(function() {
+				event.preventDefault();
+				this.keyword.value = encodeURIComponent(this.keyword.value)
+				this.submit();
+			});	
+			</script>
 			<div class="col-2">
-               <a href="write" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-pen-fancy"></i> 글쓰기</a>
+               <a href="write?${pageDto.cri.qs2}" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-pen-fancy"></i> 글쓰기</a>
             </div>
            </div>
            <div class="list-group">
@@ -62,7 +69,8 @@
                    </div>
                </a>
                <c:forEach items="${boards}" var="board">
-                  <a href="view?bno=${board.bno}" class="list-group-item list-group-item-action">
+                  <a href="view?bno=${board.bno}&${pageDto.cri.qs2}" class="list-group-item list-group-item-action">
+                  <!-- http://localhost:8080/board/view?bno=3430&cno=2&amount=10&type=T&keyword=%EC%83%88%EB%98%A5&page3 -->
                    <div class="row text-center aligin-items-center small text-muted">
                        <div class="col-1 small">${board.bno}</div>
                        <div class="col-1 small">${board.cno}</div>
@@ -76,27 +84,26 @@
                	</div>
 					  <ul class="pagination justify-content-center">
 					  	 <c:if test="${pageDto.doubleLeft}">
-						  <li class="page-item"><a class="page-link" href="list?cno=${pageDto.cri.cno}&page=1&amount=${pageDto.cri.amount}"><i class="fa-solid fa-angles-left"></i></a></li>
+						  <li class="page-item"><a class="page-link" href="list?page=1&${pageDto.cri.qs}"><i class="fa-solid fa-angles-left"></i></a></li>
 						 </c:if>
 						 
 						 <c:if test="${pageDto.left}">
-						  <li class="page-item"><a class="page-link" href="list?cno=${pageDto.cri.cno}&page=${pageDto.start - 1}&amount=${pageDto.cri.amount}"><i class="fa-solid fa-angle-left"></i></a></li>
+						  <li class="page-item"><a class="page-link" href="list?page=${pageDto.start - 1}&${pageDto.cri.qs}"><i class="fa-solid fa-angle-left"></i></a></li>
 						 </c:if>
 						 
 						 <c:forEach begin="${pageDto.start}" end="${pageDto.end}" var="i">
-						  <li class="page-item ${pageDto.cri.page == i ? 'active' : ' ' }"><a class="page-link" href="list?cno=${pageDto.cri.cno}&page=${i}&amount=${pageDto.cri.amount}">${i}</a></li>
+						  <li class="page-item ${pageDto.cri.page == i ? 'active' : ' ' }"><a class="page-link" href="list?page=${i}&${pageDto.cri.qs}">${i}</a></li>
 						 </c:forEach>
 						 
 						 <c:if test="${pageDto.right}">
-						  <li class="page-item"><a class="page-link" href="list?cno=${pageDto.cri.cno}&page=${pageDto.end + 1}&amount=${pageDto.cri.amount}"><i class="fa-solid fa-angle-right"></i></a></li>
+						  <li class="page-item"><a class="page-link" href="list?page=${pageDto.end + 1}&${pageDto.cri.qs}"><i class="fa-solid fa-angle-right"></i></a></li>
 						 </c:if>
 						 
 						 <c:if test="${pageDto.doubleRight}">
-						  <li class="page-item"><a class="page-link" href="list?cno=${pageDto.cri.cno}&page=${pageDto.realEnd}&amount=${pageDto.cri.amount}"><i class="fa-solid fa-angles-right"></i></a></li>
+						  <li class="page-item"><a class="page-link" href="list?page=${pageDto.realEnd}&${pageDto.cri.qs}"><i class="fa-solid fa-angles-right"></i></a></li>
 						 </c:if> 
 					</ul>
 				</main>
-			</div>
 <%@ include file="../common/footer.jsp" %>
 
 </body>

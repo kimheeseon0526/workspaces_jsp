@@ -17,23 +17,12 @@ import util.AlertUtil;
 
 
 
-@WebServlet("/board/view")
+@WebServlet("/board/remove")
 @Slf4j
-public class View extends HttpServlet{
+public class Remove extends HttpServlet{
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		String bno = req.getParameter("bno");
-	    
-//		if(bno == null) {
-//			resp.setContentType("text/html; charset=utf-8");
-//			PrintWriter pw = resp.getWriter();
-//			/* PrintWriter 클래스의 객체를 생성해서 출력으로 사용할 파일을 open한다. */
-//			pw.print("<script>");
-//			pw.print("alert('잘못된 접근입니다');");
-//			pw.print("location.href = 'list' ");
-//			pw.print("</script>");
-//			return;
 		if(req.getParameter("bno") == null) {
 			AlertUtil.alert("잘못된 접근!", "/board/list", req, resp);
 			//잘못된 접근이라고 alert 뜨고 보드의 리스트로 이동
@@ -42,11 +31,11 @@ public class View extends HttpServlet{
 		
 		//view.jsp에서 cri의 qs,qs2 사용하기 위해 정의해줌
 		BoardService service = new BoardService();
-		Board board =  service.findBy(Long.parseLong(bno));
+		service.remove(Long.valueOf(req.getParameter("bno")));
 		Criteria cri = Criteria.init(req);
 		req.setAttribute("cri", cri);
-		req.setAttribute("board", board);
-		req.getRequestDispatcher("/WEB-INF/views/board/view.jsp").forward(req, resp);
+		AlertUtil.alert("쓱삭슥싹 삭제 완료", "/board/list?" + cri.getQs2() , req, resp);
+
 	}
 	
 }

@@ -3,4 +3,7 @@
 <script>
 alert('${msg}');
 location.href = '${url}';
+<%
+	System.out.println(request.getAttribute("url"));
+%>
 </script>

@@ -31,7 +31,11 @@
             </div>
             <div class="p-0 py-5 ps-1 small border-bottom border-1 border-muted">${board.content}</div>
             <div>
-                <a href="list" class="btn btn-secondary btn-sm"><i class="fa-solid fa-list-ul"></i> 목록</a>
+                <a href="list?${cri.qs2}" class="btn btn-secondary btn-sm"><i class="fa-solid fa-list-ul"></i>목록</a>
+                
+                <a href="modify?bno=${board.bno}&${cri.qs2}" class="btn btn-warning btn-sm"><i class="fa-solid fa-pen-to-square"></i>수정</a>
+                <a href="remove?bno=${board.bno}&${cri.qs2}" class="btn btn-danger btn-sm" onclick="return confirm('삭제할거야ㅇㅅㅇ??')">
+                <i class="fa-solid fa-trash"></i>삭제</a>
                 <div class="float-end" >
                     <button class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-share-nodes"></i> 공유</button>
                     <button class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-clipboard"></i> 스크랩</button>

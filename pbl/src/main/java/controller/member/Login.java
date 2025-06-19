@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import domain.dto.Criteria;
 import lombok.extern.slf4j.Slf4j;
 import service.MemberService;
 
@@ -33,6 +34,7 @@ public class Login extends HttpServlet{
 		boolean ret = new MemberService().login(id, pw);
 		if(ret) {//로그인 성공
 			HttpSession session =  req.getSession();
+			session.setMaxInactiveInterval(60 * 10);
 			session.setAttribute("member", new MemberService().findById(id));
 			
 			String url = req.getParameter("url");
@@ -40,7 +42,10 @@ public class Login extends HttpServlet{
 				resp.sendRedirect(req.getContextPath() + "/index");
 			}
 			else {
-				resp.sendRedirect(URLDecoder.decode(url, "utf-8"));
+				String decodeUrl = URLDecoder.decode(url, "utf-8");
+				Criteria cri = Criteria.init(req);
+				
+				resp.sendRedirect(decodeUrl + "?" + cri.getQs2());
 			}
 
 			

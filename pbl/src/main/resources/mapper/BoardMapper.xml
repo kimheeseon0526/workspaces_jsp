@@ -3,23 +3,76 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="mapper.BoardMapper">
-  	<select id="list" resultType="domain.Board">
-  	select * from tbl_board 
-  	where cno = #{cno}
+  	<sql id="criteria">
+  	<where>
+  		<trim prefixOverrides="AND | OR">
+  		<if test="cno != null">
+  		and cno = #{cno}
+  		
+  		</if>
+  		<if test="types != null">
+  			<foreach collection="types" item="t" open="and (" close=")" separator="or">
+  				<choose>
+  					<when test="t eq 'T'.toString()">
+  					title like concat('%', #{keyword} , '%')
+  					</when>
+  					<when test="t eq 'C'.toString()">
+  					content like concat('%', #{keyword} , '%')
+  					</when>
+  					<when test="t eq 'I'.toString()">
+  					id like concat('%', #{keyword} , '%')
+  					</when>
+  				</choose>
+  			</foreach>
+  		</if>
+  		</trim>
+  	</where>
+  	</sql>
+  	
+  	
   	<!-- and title like concat('%', #{keyword}, '%') -->
+  	
+  	<!-- 목록 조회  -->
+  	<select id="list" resultType="domain.Board">
+  	select * from tbl_board
+  	<include refid="criteria" />
   	order by bno desc 
-  	limit #{amount} offset #{offset}
+  	limit #{amount} offset #{offset} <!-- 고정 태그 -->
   	</select>
+  	
+  	<!--단일 조회-->
   	<select id="selectOne" resultType="board">
   	select * from tbl_board where bno = #{bno}
   	</select>
+  	
+  	<!--글등록-->
   	<insert id="insert">
   	insert into tbl_board (title, content, id, cno) values (#{title}, #{content}, #{id}, #{cno})
   	</insert>
   	
+  	
+  	<!--게시글 갯수-->
   	<select id="getCount" resultType="long">
-  	select count(*) from tbl_board where cno = #{cno}
+  	select count(*) from tbl_board
+	<include refid="criteria" />
   	</select>
+  	
+  	<!--글수정-->
+  	<update id="update" >
+  	update tbl_board set
+  	title = #{title}, 
+  	content = #{content},
+  	moddate = now(),
+  	cno = #{cno}
+  	where bno = #{bno}
+  	</update>
+  	
+
+  	<!--글삭제-->
+  	<delete id="delete">
+  	delete from tbl_board where bno = #{bno}
+  	</delete>
+  	
   	
   	<!--
   		#{var}

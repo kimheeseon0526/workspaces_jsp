@@ -26,7 +26,7 @@ public class BoardService {
 	public Board findBy(long bno) {
 		try(SqlSession session = MybatisUtil.getSqlSession()) {
 			BoardMapper mapper = session.getMapper(BoardMapper.class);
-			return mapper.selectOne();
+			return mapper.selectOne(bno);
 		} catch (Exception e) { 
 			e.printStackTrace();
 			}
@@ -52,7 +52,27 @@ public class BoardService {
 		}
 		return 0;
 	}
-	public static void main(String[] args) {
-		new BoardService().list(new Criteria()).forEach(b -> log.info("{}", b.getTitle()));
+
+	public void modify(Board board) {
+		try(SqlSession session = MybatisUtil.getSqlSession()) {
+			BoardMapper mapper = session.getMapper(BoardMapper.class);
+			mapper.update(board);
+		} catch (Exception e) { 
+			e.printStackTrace();
+		}
+		
 	}
+	
+
+	public void remove(long bno) {
+		try(SqlSession session = MybatisUtil.getSqlSession()) {
+			BoardMapper mapper = session.getMapper(BoardMapper.class);
+			mapper.delete(bno);
+		} catch (Exception e) { 
+			e.printStackTrace();
+			}
+
+	}
+
+
 }

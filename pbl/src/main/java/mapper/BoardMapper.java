@@ -9,10 +9,16 @@ public interface BoardMapper {
 
 	List<Board> list(Criteria cri);
 
-	Board selectOne();
 
 	void insert(Board board);
 	
 	long getCount(Criteria cri);
+
+	Board selectOne(Long bno);
+
+
+	void update(Board board);
+
+	void delete(Long bno);
 
 }

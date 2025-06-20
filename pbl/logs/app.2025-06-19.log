@@ -1,0 +1,63 @@
+11:16:46.116 [main] INFO  BoardMapperTest - [T]
+11:17:28.571 [main] INFO  BoardMapperTest - [T]
+11:19:42.464 [main] INFO  sqltiming - select * from tbl_board 
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 9 msec}
+11:19:42.497 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:19:42.499 [main] INFO  BoardMapperTest - 0617글쓰기
+11:19:42.500 [main] INFO  BoardMapperTest - qqwe
+11:19:42.500 [main] INFO  BoardMapperTest - ghfhfhf
+11:19:42.500 [main] INFO  BoardMapperTest - 젭알ㄹㄹ
+11:19:42.501 [main] INFO  BoardMapperTest - 6월 19일
+11:19:42.501 [main] INFO  BoardMapperTest - 6월 19일
+11:19:42.501 [main] INFO  BoardMapperTest - 젭알ㄹㄹ
+11:19:42.502 [main] INFO  BoardMapperTest - ghfhfhf
+11:19:42.507 [main] INFO  BoardMapperTest - qqwe
+11:34:13.029 [main] INFO  BoardMapperTest - [T, I]
+11:34:13.118 [main] INFO  sqltiming - select * from tbl_board 
+
+  	 WHERE cno = 2
+
+  			and (
+
+  					title like concat('%', '새똥' , '%')
+
+  				or
+  					id like concat('%', '새똥' , '%')
+
+  			) 
+
+  	order by bno desc 
+  	limit 10 offset 20
+ {executed in 10 msec}
+11:34:13.147 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.151 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.153 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:34:13.153 [main] INFO  BoardMapperTest - 새똥이가 쓴 글
+11:35:28.316 [main] INFO  sqltiming - select * from tbl_board 
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 8 msec}
+11:35:28.354 [main] INFO  BoardService - 새똥이가 쓴 글
+11:35:28.357 [main] INFO  BoardService - 0617글쓰기
+11:35:28.357 [main] INFO  BoardService - qqwe
+11:35:28.357 [main] INFO  BoardService - ghfhfhf
+11:35:28.357 [main] INFO  BoardService - 젭알ㄹㄹ
+11:35:28.357 [main] INFO  BoardService - 6월 19일
+11:35:28.358 [main] INFO  BoardService - 6월 19일
+11:35:28.358 [main] INFO  BoardService - 젭알ㄹㄹ
+11:35:28.359 [main] INFO  BoardService - ghfhfhf
+11:35:28.359 [main] INFO  BoardService - qqwe

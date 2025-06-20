@@ -70,7 +70,6 @@ public class BoardMapperTest {
 		boardMapper.update(board);
 	
 	}
-	
-	
+
 
 }

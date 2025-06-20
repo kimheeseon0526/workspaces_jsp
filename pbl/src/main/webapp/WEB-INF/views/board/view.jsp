@@ -7,6 +7,9 @@
 <html>
 <head>
 <%@ include file="../common/head.jsp" %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/dayjs.min.js" integrity="sha512-FwNWaxyfy2XlEINoSnZh1JQ5TRRtGow0D6XcmAWmYCRgvqOUTnzCxPc9uF35u5ZEpirk1uhlPVA19tflhvnW1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/locale/ko.min.js" integrity="sha512-ycjm4Ytoo3TvmzHEuGNgNJYSFHgsw/TkiPrGvXXkR6KARyzuEpwDbIfrvdf6DwXm+b1Y+fx6mo25tBr1Icg7Fw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.13/plugin/relativeTime.min.js" integrity="sha512-MVzDPmm7QZ8PhEiqJXKz/zw2HJuv61waxb8XXuZMMs9b+an3LoqOqhOEt5Nq3LY1e4Ipbbd/e+AWgERdHlVgaA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <%@ include file="../common/header.jsp" %>
@@ -41,8 +44,219 @@
                     <button class="btn btn-outline-primary btn-sm"><i class="fa-solid fa-clipboard"></i> 스크랩</button>
                 </div>
             </div>
+                 
+            <div class="small p-0 py-2 border-top border-bottom border-1 border-muted mt-4 clearfix align-items-center d-flex">
+            	<div class="col">
+                	<span class="px-1 text-primary"><i class="px-1 fa-regular fa-comment-dots"></i>Reply</span>
+                	</div>
+                <div class="col text-end">
+                <c:if test="${empty member}">
+                	<a class="small text-primary" href='${cp}/member/login'>댓글 작성하려면 로그인</a>
+                </c:if>
+                <c:if test="${not empty member}">	
+                	<button class="btn-write-form btn btn-sm btn-primary">댓글 작성</button>
+                </c:if>
+				</div>
+            </div>
+
+            <ul class="list-group list-group-flush mt-3 reviews">
+            </ul>
+
         </main>
     </div>
+    <!-- The Modal -->
+    <div class="modal fade" id="reviewModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Reply Form</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form action="/action_page.php">
+              <div class="mb-3 mt-3">
+                <label for="content" class="form-label"><i class="fa-solid fa-comment text-primary"></i> Comment</label>
+                <textarea class="form-control risize-none" id="content" placeholder="Enter content" name="content" rows="5"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="writer" class="form-label"><i class="fa-solid fa-user text-primary"></i> Writer</label>
+                <input type="text" class="form-control" id="writer" placeholder="Enter writer name" name="writer" value="${member.id}" disabled>
+              </div>
+              <div class="form-check mb-3">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+              </div>
+            </form>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+              <button type="submit" class="btn btn-primary btn-sm btn-write-submit">Write</button>
+              <button type="submit" class="btn btn-warning btn-sm btn-modify-submit">Modify</button>
+              <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    
+	    dayjs.extend(window.dayjs_plugin_relativeTime)
+	    dayjs.locale('ko');
+	    const dayForm = 'YYYY-MM-DD HH:mm:ss';
+	    
+	    
+        $(function () {
+        	const bno = '${board.bno}'
+            const url = '${cp}' + '/reply/';
+            const modal = new bootstrap.Modal($("#reviewModal").get(0), {});
+            function list(bno, lastRno) {
+            	lastRno = lastRno ? ('/' + lastRno) : '';
+            	let reqUrl = url + 'list/' + bno + lastRno;
+            	
+                $.ajax({
+                    url: reqUrl,
+                    success: function (data) {
+                        if (!data) return;
+                        let str = '';
+                        function star(rating) {
+                            let stars = '';
+                            let starRating = rating / 2; // 1 ~ 10 을 0.5 ~ 5 로 바꾸기기
+                            // console.log(starRating);                          
+                            for (let i = 0; i < 5; i++) {
+                                if (i < Math.trunc(starRating)) { // 내림.
+                                    stars += `<i class="fa-solid fa-star"></i>`;
+                                } else if (i < starRating) {// 소수점이 0.5 보다 크면 별 반쪽.
+                                    stars += `<i class="fa-regular fa-star-half-stroke"></i>`;
+                                } else {// 나머지가 빈 별 (5 개가).
+                                    stars += `<i class="fa-regular fa-star"></i>`;
+                                }
+                            }
+                            return stars;
+                        };
+
+                        for (let r of data) {
+                            console.log(r);
+                            let stars = star(r.rating);
+                            let starRating = (r.rating) / 2; //
+                            str += `
+                <li class="list-group-item ps-5 profile-img" data-rno="\${r.rno}">
+                    <p class="rating d-flex align-items-center">${stars}<span class="ms-3">${starRating}</span></p>
+                    <p class="small text-secondary">                       
+                        <span class="me-3">\${r.id}</span>
+                        <span class="mx-3">\${dayjs(r.regdate, dayForm).fromNow() }</span>
+                    </p>
+                    <p class="small .ws-pre-line">\${r.content}</p>
+                    <button class="btn btn-danger btn-sm float-end btn-remove-submit">삭제</button>
+                    <button class="btn btn-warning btn-sm float-end mx-3 btn-modify-form">수정</button>
+                </li>
+                        `;
+                        }
+                        $(".reviews").html(str);
+                    }
+                });
+            }
+            list(bno);
+
+            // $("#reviewModal").show();
+            // modal.show();
+
+            // 글쓰기 폼 활성화 btn-write-form
+            $(".btn-write-form").on("click", function () {
+                console.log("글쓰기 폼");
+                $("#reviewModal form").get(0).reset();
+                $("#reviewModal .modal-footer button").show().eq(1).hide();
+                modal.show();
+            })
+            
+            // 글쓰기 버튼 이밴트 btn-write-submit
+            $(".btn-write-submit").click(function () {
+                const result = confirm("등록 하시겠습니까?")
+                if(!result) return;
+
+                const content = $("#content").val().trim();
+                const id = $("#writer").val().trim();
+
+                const obj = {content, id, bno};
+                console.log(obj);
+                console.log("글쓰기 전송");
+
+                $.ajax({
+                    url,
+                    method : 'POST',
+                    data : JSON.stringify(obj),
+                    success : function (data) {
+                        if(data.result) {
+                            modal.hide();
+                            list(bno);
+                        }
+                    }
+                })
+            })
+            
+            // 글수정 폼 활성화 btn-modify-form
+            $(".reviews").on("click", ".btn-modify-form", function () {
+                console.log("글수정 전송");
+                const rno = ($(this).closest("li").data("rno"));
+                $.getJSON(url + rno, function (data) {
+                    $("#reviewModal .modal-footer button").show().eq(0).hide();
+                    $("#content").val(data.content);
+                    $("#writer").val(data.id);
+                    $("#reviewModal").data("rno", rno);
+                    console.log(data);
+                    modal.show();
+                })       
+            })
+            
+            // 글수정 버튼 이벤트 btn-modify-submit
+            $(".btn-modify-submit").click(function () {
+                const result = confirm("수정 하시겠습니까?")
+                if(!result) return;
+
+                const rno = $("#reviewModal").data("rno");
+                console.log(rno);
+                // console.log("글수정 폼");
+
+                const content = $("#content").val().trim();
+                const id = $("#writer").val().trim();
+
+                const obj = {content, id, rno};
+
+                $.ajax({
+                    url : url + rno,
+                    method : 'PUT',
+                    data : JSON.stringify(obj),
+                    success : function (data) {
+                        if(data.result) {
+                            //list();
+                            modal.hide();
+                        }
+                    }
+                })
+            })
+            
+            // 글삭제 버튼 이밴트 btn-remove-submit
+            $(".reviews").on("click", ".btn-remove-submit", function () {
+                
+                const result = confirm("삭제 하시겠습니까?");
+                if (!result) return; // return false;
+                
+                const rno = $(this).closest("li").data("rno");
+                console.log("글삭제");
+                $.ajax({
+                    url : url + rno,
+                    method : 'DELETE',
+                    success : function (data) {
+                        if(data.result) {
+                            //list();
+                        }
+                    }
+                })
+            })            
+        });
+
+    </script>
 <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

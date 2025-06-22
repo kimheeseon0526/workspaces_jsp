@@ -86,7 +86,7 @@ public class ReplyServlet extends HttpServlet{
 		Long rno = Long.valueOf(uri);
 		
         
-        String ret = String.join("", req.getReader().lines().toList());      
+        String ret = String.join("", req.getReader().lines().toList());  
         Reply reply = new Gson().fromJson(ret, Reply.class);
         
 		

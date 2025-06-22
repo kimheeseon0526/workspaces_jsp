@@ -16,7 +16,6 @@ public interface BoardMapper {
 
 	Board selectOne(Long bno);
 
-
 	void update(Board board);
 
 	void delete(Long bno);

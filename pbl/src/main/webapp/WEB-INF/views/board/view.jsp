@@ -18,19 +18,19 @@
         <!-- nav -->
         <!-- content -->
         <main>
-            <div class="samll border-bottom border-3 border-primary p-0 pb-2"><a href="#" class="samll"><span class="text-primary">자유 게시판</span> 카테고리</a></div>
+            <div class="small border-bottom border-3 border-primary p-0 pb-2"><a href="#" class="small"><span class="text-primary">자유 게시판</span> 카테고리</a></div>
             <div class="small p-0 py-2">
                 <span class="px-2 border-end border-1">잡담</span>
                 <span class="px-2">${board.title}</span>
                     <div class="float-end small">
-                    <span class="text-muted"><i class="fa-solid fa-eye"></i> ${board.cnt}</span>
+                    <span class="text-muted"><i class="fa-solid fa-eye"></i>${board.cnt}</span>
                     <span class="text-muted"><i class="fa-solid fa-comment-dots"></i> 3</span>
                 </div>
             </div>
             <div class="p-0 py-2 bg-light small border-top border-2 border-muted">
                 <span class="px-2">${board.id}</span>
                 <a href="#" class="text-muted small">board.html</a>
-                <span class="float-end text-muted samll me-3">${board.regdate}</span>
+                <span class="float-end text-muted small me-3">${board.regdate}</span>
             </div>
             <div class="p-0 py-5 ps-1 small border-bottom border-1 border-muted">${board.content}</div>
             <div>
@@ -48,7 +48,7 @@
             <div class="small p-0 py-2 border-top border-bottom border-1 border-muted mt-4 clearfix align-items-center d-flex">
             	<div class="col">
                 	<span class="px-1 text-primary"><i class="px-1 fa-regular fa-comment-dots"></i>Reply</span>
-                	</div>
+                </div>
                 <div class="col text-end">
                 <c:if test="${empty member}">
                 	<a class="small text-primary" href='${cp}/member/login'>댓글 작성하려면 로그인</a>
@@ -147,7 +147,7 @@
                         <span class="me-3">\${r.id}</span>
                         <span class="mx-3">\${dayjs(r.regdate, dayForm).fromNow() }</span>
                     </p>
-                    <p class="small .ws-pre-line">\${r.content}</p>
+                    <p class="small ws-pre-line">\${r.content}</p>
                     <button class="btn btn-danger btn-sm float-end btn-remove-submit">삭제</button>
                     <button class="btn btn-warning btn-sm float-end mx-3 btn-modify-form">수정</button>
                 </li>
@@ -198,11 +198,17 @@
             // 글수정 폼 활성화 btn-modify-form
             $(".reviews").on("click", ".btn-modify-form", function () {
                 console.log("글수정 전송");
+                //클릭한 댓글(li)의 rno(댓글번호) 가져오기
                 const rno = ($(this).closest("li").data("rno"));
+                
+                //서버에서 댓글 데이터 가져오기
                 $.getJSON(url + rno, function (data) {
-                    $("#reviewModal .modal-footer button").show().eq(0).hide();
+                    //첫번째 버튼 숨기고 나머지 보이기
+                	$("#reviewModal .modal-footer button").show().eq(0).hide();
+                    //가져온 댓글 데이터를 수정폼에 세팅
                     $("#content").val(data.content);
                     $("#writer").val(data.id);
+                    //모달창에도 rno 저장해둠(다움 수정 전송 떼 필요)
                     $("#reviewModal").data("rno", rno);
                     console.log(data);
                     modal.show();
@@ -210,8 +216,9 @@
             })
             
             // 글수정 버튼 이벤트 btn-modify-submit
-            $(".btn-modify-submit").click(function () {
-                const result = confirm("수정 하시겠습니까?")
+           // $(".btn-modify-submit").click(function () {
+            	$(".reviews").on("click", ".btn-modify-submit", function () {
+                const result = confirm("댓글 수정 하시겠습니까?");
                 if(!result) return;
 
                 const rno = $("#reviewModal").data("rno");
@@ -221,12 +228,13 @@
                 const content = $("#content").val().trim();
                 const id = $("#writer").val().trim();
 
-                const obj = {content, id, rno};
+                const obj = {rno, content, id};
 
                 $.ajax({
                     url : url + rno,
                     method : 'PUT',
                     data : JSON.stringify(obj),
+                    //contentType: "application/json", 
                     success : function (data) {
                         if(data.result) {
                             //list();
@@ -238,8 +246,7 @@
             
             // 글삭제 버튼 이밴트 btn-remove-submit
             $(".reviews").on("click", ".btn-remove-submit", function () {
-                
-                const result = confirm("삭제 하시겠습니까?");
+                const result = confirm("댓글 삭제 하시겠습니까?");
                 if (!result) return; // return false;
                 
                 const rno = $(this).closest("li").data("rno");
@@ -250,6 +257,7 @@
                     success : function (data) {
                         if(data.result) {
                             //list();
+                        	modal.hide();
                         }
                     }
                 })

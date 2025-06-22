@@ -9,12 +9,15 @@ import util.MybatisUtil;
 import util.PasswordEncoder;
 @Slf4j
 public class MemberService {
-	//
+	//회원가입
 	public int register(Member member) {
 		try(SqlSession session = MybatisUtil.getSqlSession()) {
 			MemberMapper mapper = session.getMapper(MemberMapper.class);
+			//getMapper(MemberMapper.class) : Membermapper 인터페이스와
+			//실제 쿼리문을 작성하는 MemberMapper.xml을 열결해주는 것
 			member.setPw(PasswordEncoder.encode(member.getPw()));
 			return mapper.insert(member);
+			//mapper 인터페이스의 메서드로 sql 실행 가능
 		} catch (Exception e) { 
 			e.printStackTrace();
 			}
@@ -40,13 +43,7 @@ public class MemberService {
 	
 	public static void main(String[] args) {
 		MemberService memberService = new MemberService();
-//		Member member = Member.builder().id("sae1").pw("1234").build();
-//		memberService.register(member);
-//		log.info("{}", memberService.findById("sae1"));
-//		log.info("{} 핫하 {} ", 10, 20);
-//		출력값 : [35m11:14:33.332[0;39m [34m INFO[0;39m [36mservice.MemberService[0;39m - 10 핫하 20
 		memberService.register(Member.builder().id("sae").pw("1234").name("새똥이").build());
-		
 		log.info("{}", memberService.login("sae", "1234"));
 		memberService.login("sae", "12345");
 	}

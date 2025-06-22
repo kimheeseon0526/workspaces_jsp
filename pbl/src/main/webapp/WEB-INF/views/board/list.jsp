@@ -48,7 +48,7 @@
 			<div class="col-2">
                <a href="write?${pageDto.cri.qs2}" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-pen-fancy"></i> 글쓰기</a>
             </div>
-           </div>
+          </div>
            <div class="list-group">
                <div class="list-group-item small">
                    <div class="row text-center aligin-items-center small text-muted">
@@ -59,51 +59,52 @@
                        <div class="col-1 samll">조회수</div>
                    </div>
                </div>
-               <a href="board_view.html" class="list-group-item list-group-item-action list-group-item-secondry">
-                   <div class="row text-center aligin-items-center small text-muted">
+               <a href="board_view.html" class="list-group-item list-group-item-action list-group-item-secondary">
+                   <div class="row text-center align-items-center small text-muted">
                        <div class="col-1 small">1</div>
                        <div class="col-1 small">자유</div>
                        <div class="col text-start text-black">제목</div>
                        <div class="col-1 small"><span class="samll">25.06.13</span></div>
-                       <div class="col-1 samll"><span class="samll">13</span></div>
+                       <div class="col-1 small"><span class="samll">13</span></div>
                    </div>
                </a>
                <c:forEach items="${boards}" var="board">
                   <a href="view?bno=${board.bno}&${pageDto.cri.qs2}" class="list-group-item list-group-item-action">
                   <!-- http://localhost:8080/board/view?bno=3430&cno=2&amount=10&type=T&keyword=%EC%83%88%EB%98%A5&page3 -->
-                   <div class="row text-center aligin-items-center small text-muted">
+                  <div class="row text-center align-items-center small text-muted">
                        <div class="col-1 small">${board.bno}</div>
                        <div class="col-1 small">${board.cno}</div>
                        <div class="col text-start text-black">${board.title} <span class="small text-danger fw-bold">1</span></div>
                        <fmt:parseDate value="${board.regdate}" pattern="yyyy-MM-dd HH:mm:ss" var="parsedDate" />
                        <fmt:formatDate value="${parsedDate}" pattern="yy.MM.dd" /> 
-                       <div class="col-1 samll"><span class="samll">${board.cnt}</span></div>
-                 </div>
-               	</a>
+                       <div class="col-1 small"><span class="small">${board.cnt}</span></div>
+                  </div>
+               	  </a>
                	</c:forEach>
                	</div>
-					  <ul class="pagination justify-content-center">
-					  	 <c:if test="${pageDto.doubleLeft}">
-						  <li class="page-item"><a class="page-link" href="list?page=1&${pageDto.cri.qs}"><i class="fa-solid fa-angles-left"></i></a></li>
+			    	<ul class="pagination justify-content-center">
+						<c:if test="${pageDto.doubleLeft}">
+							<li class="page-item"><a class="page-link" href="list?page=1&${pageDto.cri.qs}"><i class="fa-solid fa-angles-left"></i></a></li>
 						 </c:if>
 						 
 						 <c:if test="${pageDto.left}">
-						  <li class="page-item"><a class="page-link" href="list?page=${pageDto.start - 1}&${pageDto.cri.qs}"><i class="fa-solid fa-angle-left"></i></a></li>
+						 	<li class="page-item"><a class="page-link" href="list?page=${pageDto.start - 1}&${pageDto.cri.qs}"><i class="fa-solid fa-angle-left"></i></a></li>
 						 </c:if>
 						 
 						 <c:forEach begin="${pageDto.start}" end="${pageDto.end}" var="i">
-						  <li class="page-item ${pageDto.cri.page == i ? 'active' : ' ' }"><a class="page-link" href="list?page=${i}&${pageDto.cri.qs}">${i}</a></li>
+						 	<li class="page-item ${pageDto.cri.page == i ? 'active' : ' ' }"><a class="page-link" href="list?page=${i}&${pageDto.cri.qs}">${i}</a></li>
 						 </c:forEach>
 						 
 						 <c:if test="${pageDto.right}">
-						  <li class="page-item"><a class="page-link" href="list?page=${pageDto.end + 1}&${pageDto.cri.qs}"><i class="fa-solid fa-angle-right"></i></a></li>
+						 	<li class="page-item"><a class="page-link" href="list?page=${pageDto.end + 1}&${pageDto.cri.qs}"><i class="fa-solid fa-angle-right"></i></a></li>
 						 </c:if>
 						 
 						 <c:if test="${pageDto.doubleRight}">
-						  <li class="page-item"><a class="page-link" href="list?page=${pageDto.realEnd}&${pageDto.cri.qs}"><i class="fa-solid fa-angles-right"></i></a></li>
+						 	<li class="page-item"><a class="page-link" href="list?page=${pageDto.realEnd}&${pageDto.cri.qs}"><i class="fa-solid fa-angles-right"></i></a></li>
 						 </c:if> 
 					</ul>
-				</main>
+	</main>
+	</div>
 <%@ include file="../common/footer.jsp" %>
 
 </body>

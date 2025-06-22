@@ -10,8 +10,8 @@
 <form method="post">
 	<input name="id" placeholder="id">
 	<input type="password" name="pw" placeholder="pw">
-	<input name="name" placeholder="name">
-	<input name="email" placeholder="email">
+	<input name="name" placeholder="이름을 입력하세요">
+	<input name="email" placeholder="email을 입력하세요">
 	<button>가입</button>
 </form>
 </body>

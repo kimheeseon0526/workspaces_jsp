@@ -17,12 +17,16 @@
   	
   	<!--단일 조회-->
   	<select id="selectOne" resultType="reply">
-  	select * from tbl_reply where bno = #{rno}
+  	select * from tbl_reply where rno = #{rno}
   	</select>
   	
   	<!--글등록-->
   	<insert id="insert">
   	insert into tbl_reply (content, id, bno) values (#{content}, #{id}, #{bno})
+  	<selectKey resultType="long" keyProperty="rno" order="AFTER">
+  	select max(rno) from tbl_reply
+  	</selectKey>
+
   	</insert>
 
   	

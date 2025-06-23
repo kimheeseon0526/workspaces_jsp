@@ -88,3 +88,47 @@ java.sql.SQLIntegrityConstraintViolationException: (conn=4782) Duplicate entry '
 15:22:29.731 [main] INFO  MemberService - true
 15:22:29.739 [main] INFO  sqltiming - select * from tbl_member where id = 'sae'
  {executed in 6 msec}
+10:58:03.846 [main] INFO  sqltiming - insert into tbl_reply (content, id, bno) values ('매퍼 테스트 등록 글', 'qwe', 4092)
+ {executed in 7 msec}
+10:58:03.854 [main] INFO  sqltiming - select max(rno) from tbl_reply
+ {executed in 5 msec}
+10:58:03.871 [main] INFO  ReplyMapperTest - Reply(rno=523, content=매퍼 테스트 등록 글, id=qwe, regdate=null, bno=4092)
+13:31:17.336 [main] INFO  sqltiming - delete from tbl_reply where rno = 4
+ {executed in 12 msec}
+13:31:17.436 [main] INFO  sqltiming - select * from tbl_reply where bno = 1 
+
+  	and rno < 35 
+
+  	order by rno desc limit 5
+ {executed in 12 msec}
+13:31:17.502 [main] INFO  sqltiming - select * from tbl_reply where rno = 7
+ {executed in 13 msec}
+13:31:17.508 [main] INFO  ReplyMapperTest - Reply(rno=7, content=댓글 테스트, id=qwe, regdate=2025-06-20 10:59:24, bno=4092)
+13:31:17.563 [main] INFO  sqltiming - select * from tbl_reply where bno = 4092 
+
+  	order by rno desc limit 5
+ {executed in 10 msec}
+13:31:17.567 [main] INFO  ReplyMapperTest - 2025-06-23 10:07:12
+13:31:17.567 [main] INFO  ReplyMapperTest - 2025-06-23 10:04:41
+13:31:17.567 [main] INFO  ReplyMapperTest - 2025-06-20 16:15:41
+13:31:17.567 [main] INFO  ReplyMapperTest - 2025-06-20 13:12:13
+13:31:17.567 [main] INFO  ReplyMapperTest - 2025-06-20 12:57:36
+13:31:17.646 [main] INFO  sqltiming - insert into tbl_reply (content, id, bno) values ('매퍼 테스트', 'qwe', 1)
+ {executed in 13 msec}
+13:31:17.659 [main] INFO  sqltiming - select max(rno) from tbl_reply
+ {executed in 13 msec}
+13:31:17.716 [main] INFO  sqltiming - insert into tbl_reply (content, id, bno) values ('매퍼 테스트 등록 글', 'qwe', 4092)
+ {executed in 10 msec}
+13:31:17.726 [main] INFO  sqltiming - select max(rno) from tbl_reply
+ {executed in 9 msec}
+13:31:17.727 [main] INFO  ReplyMapperTest - Reply(rno=525, content=매퍼 테스트 등록 글, id=qwe, regdate=null, bno=4092)
+13:31:17.753 [main] INFO  sqltiming - select * from tbl_reply where rno = 1
+ {executed in 7 msec}
+13:32:29.945 [main] INFO  sqltiming - select * from tbl_reply where rno = 1
+ {executed in 9 msec}
+13:32:34.284 [main] INFO  sqltiming - select * from tbl_reply where rno = 1
+ {executed in 14 msec}
+13:41:09.525 [main] INFO  sqltiming - insert into tbl_reply (content, id, bno) values ('매퍼 테스트', 'qwe', 1)
+ {executed in 12 msec}
+13:41:09.533 [main] INFO  sqltiming - select max(rno) from tbl_reply
+ {executed in 5 msec}

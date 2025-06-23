@@ -14,7 +14,7 @@ public class ReplyService {
 	public Reply findBy(Long rno) {
 		try(SqlSession session = MybatisUtil.getSqlSession()) {
 			ReplyMapper mapper = session.getMapper(ReplyMapper.class);
-			mapper.selectOne(rno);
+			return mapper.selectOne(rno);
 		} catch (Exception e) { e.printStackTrace();}
 		return null;
 	}
@@ -28,25 +28,28 @@ public class ReplyService {
 		return null;
 
 	}
-	public void register(Reply Reply) {
+	public void register(Reply reply) {
 		try(SqlSession session = MybatisUtil.getSqlSession()) {
 			ReplyMapper mapper = session.getMapper(ReplyMapper.class);
-			mapper.insert(Reply);
+			mapper.insert(reply);
 		} catch (Exception e) { e.printStackTrace();}
 
+	}
+	
+	public void modify(Reply reply) {
+		try(SqlSession session = MybatisUtil.getSqlSession()) {
+			ReplyMapper mapper = session.getMapper(ReplyMapper.class);
+			mapper.update(reply);
+		} catch (Exception e) { e.printStackTrace();}
+		
 	}
 	public void remove(Long rno) {
 		try(SqlSession session = MybatisUtil.getSqlSession()) {
 			ReplyMapper mapper = session.getMapper(ReplyMapper.class);
 			mapper.delete(rno);
-		} catch (Exception e) { e.printStackTrace();}
-
-	}
-	public void modify(Reply Reply) {
-		try(SqlSession session = MybatisUtil.getSqlSession()) {
-			ReplyMapper mapper = session.getMapper(ReplyMapper.class);
-			 mapper.update(Reply);
-		} catch (Exception e) { e.printStackTrace();}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 	}
 

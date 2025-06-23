@@ -53,11 +53,18 @@ public class ReplyMapperTest { // 서비스와 매퍼는 테스트코드 쓰는�
     @Test
     @DisplayName("댓글수정 테스트")
     public void testUpdate() {
-
         Long rno = 1L;
         Reply reply = replyMapper.selectOne(rno);
         reply.setContent("수정하기");
         replyMapper.update(reply);
+    }
+    
+    @Test
+    @DisplayName("글 등록 테스트")
+    public void testInsert() {
+    	Reply reply = Reply.builder().content("매퍼 테스트 등록 글").id("qwe").bno(4092L).build();
+      replyMapper.insert(reply); 
+      log.info("{}",reply);
     }
 
     @Test
@@ -67,6 +74,6 @@ public class ReplyMapperTest { // 서비스와 매퍼는 테스트코드 쓰는�
         Long rno = 4L;
         replyMapper.delete(rno);
 
-
     }
+   
 }

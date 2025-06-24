@@ -13,5 +13,6 @@ public class Attach {
 	private String origin;	//파일 원본
 	private Long bno;
 	private Long rno;
+	private int odr;
 	
 }

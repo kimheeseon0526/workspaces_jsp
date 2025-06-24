@@ -9,6 +9,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +22,8 @@ import com.google.gson.Gson;
 
 import domain.Attach;
 import lombok.extern.slf4j.Slf4j;
+import net.coobird.thumbnailator.Thumbnailator;
+import net.coobird.thumbnailator.Thumbnails;
 
 @WebServlet("/upload")
 @MultipartConfig(location = "d:/upload/tmp",
@@ -42,6 +45,7 @@ public class UploadFile extends HttpServlet{
 		final String UPLOAD_PATH = "d:/upload/files";
 		List<Attach> attachs = new ArrayList<Attach>();
 		
+		int odr = 0;
 		for(Part part : parts) {
 			if(part.getSize() == 0) {
 				continue;
@@ -64,7 +68,7 @@ public class UploadFile extends HttpServlet{
 			UUID uuid = UUID.randomUUID();	//이제 안겹친
 			String fileName = uuid + ext;
 			
-			boolean iamge = contentType.startsWith("image");
+			boolean image = contentType.startsWith("image");
 			String path = genPath();
 			String realPath = UPLOAD_PATH + "/" + path + "/";
 			File file = new File(realPath);
@@ -73,13 +77,25 @@ public class UploadFile extends HttpServlet{
 			}
 			
 			part.write(realPath + fileName);
+			if(image) {
+				try {
+				//이미지인 경우 추가 처리 > 썸네일 생성
+				Thumbnails.of(new File(realPath + fileName)).size(150, 150).toFile(realPath + "t_" + fileName);
+				}
+				catch(Exception e) { // 이미지 변환 시도했는데 에러 뜨면 이건 이미지 아니라고 하고 종료
+					image = false;
+				}
+
+			}
+			
 			
 			log.info(" {} :: {} :: {} :: {}", fileSize, origin, contentType, ext);
 			attachs.add(Attach.builder()
 					.uuid(fileName)
 					.origin(origin)
-					.image(iamge)
+					.image(image)
 					.path(path)
+					.odr(odr++) //0,1,2,3~
 					.build());
 		}
 		resp.setContentType("application/json; charset=utf-8");

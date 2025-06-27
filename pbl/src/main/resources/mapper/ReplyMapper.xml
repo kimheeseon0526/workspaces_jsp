@@ -41,6 +41,11 @@
   	delete from tbl_reply where rno = #{rno}
   	</delete>
   	
+  	<!-- 글 삭제시 ~ ??? -->
+  	<delete id="deleteByBno">
+  	delete from tbl_reply where bno = #{bno}
+  	</delete>
+  	
   	
   	<!--
   		#{var}

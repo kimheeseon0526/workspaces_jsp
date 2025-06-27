@@ -1,0 +1,241 @@
+11:55:23.611 [main] INFO  BoardMapperTest - null
+11:55:23.667 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 9 msec}
+11:55:23.691 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4097, rno=null, odr=0)]
+11:55:23.700 [main] INFO  BoardMapperTest - [Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=false, origin=null, bno=4096, rno=null, odr=0)]
+11:55:23.703 [main] INFO  BoardMapperTest - [Attach(uuid=82bbe58c-f4ec-46be-b3ff-cabb362d1b8e.jpg, path=2025/06/25, image=false, origin=null, bno=4095, rno=null, odr=0)]
+11:55:23.703 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4094, rno=null, odr=0)]
+11:55:23.703 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4092, rno=null, odr=0)]
+11:55:23.703 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4091, rno=null, odr=0)]
+11:55:23.703 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4089, rno=null, odr=0)]
+11:55:23.703 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4088, rno=null, odr=0)]
+11:55:23.704 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4087, rno=null, odr=0)]
+11:55:23.704 [main] INFO  BoardMapperTest - [Attach(uuid=null, path=null, image=false, origin=null, bno=4086, rno=null, odr=0)]
+11:56:59.116 [main] INFO  BoardMapperTest - null
+11:56:59.172 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 11 msec}
+11:56:59.194 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4097, rno=null, odr=0)]
+11:56:59.204 [main] INFO  BoardMapperTest - 3 0 [Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=false, origin=null, bno=4096, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=82bbe58c-f4ec-46be-b3ff-cabb362d1b8e.jpg, path=2025/06/25, image=false, origin=null, bno=4095, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4094, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 0 324 [Attach(uuid=null, path=null, image=false, origin=null, bno=4092, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 0 1 [Attach(uuid=null, path=null, image=false, origin=null, bno=4091, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4089, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4088, rno=null, odr=0)]
+11:56:59.205 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4087, rno=null, odr=0)]
+11:56:59.206 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4086, rno=null, odr=0)]
+11:57:31.219 [main] INFO  BoardMapperTest - [T, I]
+11:57:31.280 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2
+
+  			and (
+
+  					title like concat('%', '새똥' , '%')
+
+  				or
+  					id like concat('%', '새똥' , '%')
+
+  			) 
+
+  	order by bno desc 
+  	limit 10 offset 20
+ {executed in 8 msec}
+11:57:31.323 [main] INFO  BoardMapperTest - null
+11:57:31.345 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 6 msec}
+11:57:31.351 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4097, rno=null, odr=0)]
+11:57:31.366 [main] INFO  BoardMapperTest - 3 0 [Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=false, origin=null, bno=4096, rno=null, odr=0)]
+11:57:31.366 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=82bbe58c-f4ec-46be-b3ff-cabb362d1b8e.jpg, path=2025/06/25, image=false, origin=null, bno=4095, rno=null, odr=0)]
+11:57:31.366 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4094, rno=null, odr=0)]
+11:57:31.366 [main] INFO  BoardMapperTest - 0 324 [Attach(uuid=null, path=null, image=false, origin=null, bno=4092, rno=null, odr=0)]
+11:57:31.366 [main] INFO  BoardMapperTest - 0 1 [Attach(uuid=null, path=null, image=false, origin=null, bno=4091, rno=null, odr=0)]
+11:57:31.367 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4089, rno=null, odr=0)]
+11:57:31.367 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4088, rno=null, odr=0)]
+11:57:31.367 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4087, rno=null, odr=0)]
+11:57:31.367 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4086, rno=null, odr=0)]
+11:57:31.384 [main] INFO  sqltiming - select * from tbl_board where bno = 1
+ {executed in 7 msec}
+11:57:31.386 [main] INFO  BoardMapperTest - Board(bno=1, title=새똥이가 쓴 글, content=새똥, id=sae, regdate=2025-06-12 17:36:39, moddate=2025-06-12 17:36:39, cnt=0, cno=2, replyCnt=0, attachCnt=0, attachs=[])
+11:57:31.429 [main] INFO  sqltiming - select * from tbl_board where bno = 50
+ {executed in 6 msec}
+11:57:31.439 [main] INFO  sqltiming - update tbl_board set
+  	title = '제목만 수정수정', 
+  	content = '술먹자 술~',
+  	moddate = now(),
+  	cno = 2
+  	where bno = 50
+ {executed in 9 msec}
+12:10:13.427 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno from tbl_board where bno = 4095
+ {executed in 8 msec}
+12:10:13.453 [main] INFO  BoardMapperTest - Board(bno=4095, title=0625 지유 감자, content=<p>지유는 깐 감자</p>
+, id=qwe, regdate=2025-06-25 13:11:43, moddate=2025-06-25 13:11:43, cnt=0, cno=2, replyCnt=0, attachCnt=0, attachs=[])
+12:10:48.920 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno from tbl_board where bno = 4095
+ {executed in 8 msec}
+12:10:48.941 [main] INFO  BoardMapperTest - Board(bno=4095, title=0625 지유 감자, content=<p>지유는 깐 감자</p>
+, id=qwe, regdate=2025-06-25 13:11:43, moddate=2025-06-25 13:11:43, cnt=0, cno=2, replyCnt=0, attachCnt=0, attachs=[])
+12:11:00.371 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno from tbl_board where bno = 4096
+ {executed in 9 msec}
+12:11:00.396 [main] INFO  BoardMapperTest - Board(bno=4096, title=0626 몽요일몽, content=<p>몽요일이당</p>
+, id=qwe, regdate=2025-06-26 09:37:10, moddate=2025-06-26 09:37:10, cnt=0, cno=2, replyCnt=0, attachCnt=0, attachs=[])
+12:11:02.479 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno from tbl_board where bno = 4096
+ {executed in 9 msec}
+12:11:02.502 [main] INFO  BoardMapperTest - Board(bno=4096, title=0626 몽요일몽, content=<p>몽요일이당</p>
+, id=qwe, regdate=2025-06-26 09:37:10, moddate=2025-06-26 09:37:10, cnt=0, cno=2, replyCnt=0, attachCnt=0, attachs=[])
+12:12:44.916 [main] INFO  BoardMapperTest - [T, I]
+12:12:44.980 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2
+
+  			and (
+
+  					title like concat('%', '새똥' , '%')
+
+  				or
+  					id like concat('%', '새똥' , '%')
+
+  			) 
+
+  	order by bno desc 
+  	limit 10 offset 20
+ {executed in 9 msec}
+12:12:45.025 [main] INFO  BoardMapperTest - null
+12:12:45.035 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 6 msec}
+12:12:45.042 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4097, rno=null, odr=0)]
+12:12:45.060 [main] INFO  BoardMapperTest - 3 0 [Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=false, origin=null, bno=4096, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=82bbe58c-f4ec-46be-b3ff-cabb362d1b8e.jpg, path=2025/06/25, image=false, origin=null, bno=4095, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4094, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 0 324 [Attach(uuid=null, path=null, image=false, origin=null, bno=4092, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 0 1 [Attach(uuid=null, path=null, image=false, origin=null, bno=4091, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4089, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4088, rno=null, odr=0)]
+12:12:45.061 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4087, rno=null, odr=0)]
+12:12:45.062 [main] INFO  BoardMapperTest - 0 0 [Attach(uuid=null, path=null, image=false, origin=null, bno=4086, rno=null, odr=0)]
+12:12:45.083 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno from tbl_board where bno = 4096
+ {executed in 5 msec}
+12:12:45.085 [main] INFO  BoardMapperTest - Board(bno=4096, title=0626 몽요일몽, content=<p>몽요일이당</p>
+, id=qwe, regdate=2025-06-26 09:37:10, moddate=2025-06-26 09:37:10, cnt=0, cno=2, replyCnt=0, attachCnt=0, attachs=[])
+12:12:45.122 [main] INFO  sqltiming - select bno, title, content, id, regdate, moddate, cnt, cno from tbl_board where bno = 50
+ {executed in 5 msec}
+12:12:45.129 [main] INFO  sqltiming - update tbl_board set
+  	title = '제목만 수정수정', 
+  	content = '술먹자 술~',
+  	moddate = now(),
+  	cno = 2
+  	where bno = 50
+ {executed in 6 msec}
+14:52:22.811 [main] INFO  BoardMapperTest - [T, I]
+14:52:22.878 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2
+
+  			and (
+
+  					title like concat('%', '새똥' , '%')
+
+  				or
+  					id like concat('%', '새똥' , '%')
+
+  			) 
+
+  	order by bno desc 
+  	limit 10 offset 20
+ {executed in 9 msec}
+14:52:22.920 [main] INFO  BoardMapperTest - null
+14:52:22.936 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path
+  	from tbl_board b
+
+  	 WHERE cno = 2 
+
+  	order by bno desc 
+  	limit 10 offset 0
+ {executed in 6 msec}
+14:52:22.943 [main] INFO  BoardMapperTest - 0 0 []
+14:52:22.945 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=b98afa00-cf1a-481c-b36d-09aa16013c1a.png, path=2025/06/26, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
+14:52:22.962 [main] INFO  BoardMapperTest - 0 0 []
+14:52:22.962 [main] INFO  BoardMapperTest - 3 0 [Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
+14:52:22.962 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=82bbe58c-f4ec-46be-b3ff-cabb362d1b8e.jpg, path=2025/06/25, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
+14:52:22.962 [main] INFO  BoardMapperTest - 0 0 []
+14:52:22.962 [main] INFO  BoardMapperTest - 0 324 []
+14:52:22.962 [main] INFO  BoardMapperTest - 0 1 []
+14:52:22.962 [main] INFO  BoardMapperTest - 0 0 []
+14:52:22.962 [main] INFO  BoardMapperTest - 0 0 []
+14:52:22.990 [main] INFO  sqltiming - select *, a.bno a_bno
+	from tbl_board b
+	left join tbl_attach a using(bno)
+	where bno = 4096;
+ {executed in 13 msec}
+14:52:23.000 [main] INFO  BoardMapperTest - Board(bno=4096, title=0626 몽요일몽, content=<p>몽요일이당</p>
+, id=qwe, regdate=2025-06-26 09:37:10, moddate=2025-06-26 09:37:10, cnt=16, cno=2, replyCnt=0, attachCnt=0, attachs=[Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=true, origin=다운로드 222.jpg, bno=4096, rno=null, odr=0, size=0), Attach(uuid=f63074f0-3633-468e-9362-323df2faf9dc.jpg, path=2025/06/26, image=true, origin=다운로드.jpg, bno=4096, rno=null, odr=1, size=0), Attach(uuid=bb3826b4-6987-4350-b5be-e4b2ac7d74ae, path=2025/06/26, image=false, origin=새 텍스트 문서, bno=4096, rno=null, odr=2, size=0)])
+14:52:23.025 [main] INFO  sqltiming - select *, a.bno a_bno
+	from tbl_board b
+	left join tbl_attach a using(bno)
+	where bno = 50;
+ {executed in 6 msec}
+14:52:23.033 [main] INFO  sqltiming - update tbl_board set
+  	title = '제목만 수정수정', 
+  	content = '술먹자 술~',
+  	moddate = now(),
+  	cno = 2
+  	where bno = 50
+ {executed in 6 msec}

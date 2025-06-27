@@ -1,6 +1,8 @@
 package controller.board;
 
 import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,6 +10,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import domain.Attach;
 import domain.Board;
 import domain.dto.Criteria;
 import lombok.extern.slf4j.Slf4j;
@@ -45,8 +51,14 @@ public class Write extends HttpServlet{
 		String content = req.getParameter("content");
 		String id = req.getParameter("id");
 		Integer cno = Integer.valueOf(req.getParameter("cno"));
+		
+		//첨부파일 내용 수집
+		String encodedStr = req.getParameter("encodedStr");
+		Type type =  new TypeToken<List<Attach>>() {}.getType();
+		List<Attach> list = new  Gson().fromJson(encodedStr, type);
+		log.info("{}", list);
 		//board 인스턴스 생성(4개)
-		Board board = Board.builder().id(id).content(content).title(title).cno(cno).build();
+		Board board = Board.builder().id(id).content(content).title(title).cno(cno).attachs(list).build();
 		log.info("{}", board);
 		
 		//서비스 호출(board 객체가지고)

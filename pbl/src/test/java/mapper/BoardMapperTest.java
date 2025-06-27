@@ -30,7 +30,7 @@ public class BoardMapperTest {
 	@Test
 	public void testSelectOne() {
 		//given
-		Long bno = 1L;
+		Long bno = 4096L;
 		
 		//when
 		Board board = boardMapper.selectOne(bno);
@@ -41,14 +41,16 @@ public class BoardMapperTest {
 		log.info("{}", board);
 	}
 	
-	//list
 	@Test
-	@DisplayName("목록 조회 3페이지 10갸씩 2번 카테고리")
-	public void testList() {
-		Criteria cri = new Criteria(3, 10, 2);
-		List<Board> list = boardMapper.list(cri);
-		list.forEach(b -> log.info("{}", b.getTitle()));
-	}
+    @DisplayName("목록 조회 3페이지 10개씩 2번 카테고리 테스트")
+    public void testList() {
+
+        Criteria cri = new Criteria(1, 10, 2);  //1페이지 10개, 2번 카테고리
+        // 오늘이라는 키워드를 1페이지에 10개씩 카테고리에 보이게 하겠다
+        log.info(Arrays.toString(cri.getTypes()));
+        List<Board> list = boardMapper.list(cri);
+        list.forEach(b -> log.info("{} {} {}", b.getAttachCnt(),b.getReplyCnt(), b.getAttachs()));
+    }
 	
 	@Test
 	@DisplayName("목록 조회 검색어 테스트")

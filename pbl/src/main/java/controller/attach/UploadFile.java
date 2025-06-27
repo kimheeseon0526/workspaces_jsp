@@ -96,7 +96,8 @@ public class UploadFile extends HttpServlet{
 					.image(image)
 					.path(path)
 					.odr(odr++) //0,1,2,3~
-					.build());
+					.size(fileSize)
+			.build());
 		}
 		resp.setContentType("application/json; charset=utf-8");
 		resp.getWriter().print(new Gson().toJson(attachs)); //비동기 작업

@@ -12,13 +12,7 @@ import org.apache.ibatis.transaction.TransactionFactory;
 import org.apache.ibatis.transaction.jdbc.JdbcTransactionFactory;
 
 public class MybatisUtil {
-	
-	public static void main(String[] args) {
-		System.out.println(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource());
-		// 여기서부터 세로운 내용
-		System.out.println(getSqlSession());
-	}
-	
+
 	private static SqlSessionFactory sqlSessionFactory;
 	
 	static {
@@ -33,6 +27,18 @@ public class MybatisUtil {
 	}
 
 	public static SqlSession getSqlSession() {
-		return sqlSessionFactory.openSession(true);
+		return getSqlSession(true);
 	}
+	
+	public static SqlSession getSqlSession(boolean autoCommit) {
+		return sqlSessionFactory.openSession(autoCommit);
+	}
+	
+	
+	public static void main(String[] args) {
+		System.out.println(sqlSessionFactory.getConfiguration().getEnvironment().getDataSource());
+		// 여기서부터 세로운 내용
+		System.out.println(getSqlSession());
+	}
+	
 }

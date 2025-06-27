@@ -14,8 +14,19 @@
 	<div class="container p-0">
 
         <main>
-            <form method="post">
-            <div class="samll border-bottom border-3 border-primary p-0 pb-2"><a href="#" class="samll"><span class="text-primary">자유 게시판</span> 카테고리</a></div>
+            <form method="post" id="writeForm" action="write">
+            <div class="samll border-bottom border-3 border-primary p-0 pb-2">
+            	<a href="#" class="samll">
+            		<span class="text-primary">
+            			<c:forEach items="${cate}" var="c">
+            				<c:if test="${c.cno == cri.cno}">
+            				${c.cname}
+            				</c:if>
+            			</c:forEach>
+            		</span> 
+            		카테고리
+            	</a>
+            </div>
             <div class="small p-0 py-2 ">
                 <input placeholder="title" class="form-control" name="title" id="title">
             </div>
@@ -23,11 +34,18 @@
                 <textarea name="content" id="editor1" class="form-control resize-none"></textarea>
             </div>
 			
-			<div class="d-grid my-2 ">
-				<div class="small my-1"><i class="fa-solid fa-paperclip"></i> 첨부파일</div>
-				<label class="btn btn-info">파일을 첨부하시려면 클릭클릭!<input type="file" multiple class="d-none" id="f1"></label>
-			</div>
 			
+			
+			<div class="d-grid my-2 attach-area">
+				<div class="small my-1"><i class="fa-solid fa-paperclip"></i> 첨부파일</div>
+				<label class="btn btn-info">파일 첨부<input type="file" multiple class="d-none" id="f1"></label>
+				<ul class="list-group my-3 attach-list">
+				</ul>
+				<div class="row justify-content-around w-75 mx-auto attach-thumb">
+				</div>
+	
+			</div>
+	
             <div class="my-2">
                 <button class="btn btn-secondary btn-sm"><i class="fa-solid fa-list-ul"></i> 목록</button>
                 <div class="float-end">
@@ -35,14 +53,26 @@
                 </div>
             </div>
             <input type="hidden" name="id" value="${member.id}" />
-            <input type="hidden" name="cno" value="2" />
+            <input type="hidden" name="cno" value="${cri.cno}" />
+            <input type="hidden" name="page" value="1">
+            <input type="hidden" name="amount" value="${cri.amount}">
+            <input type="hidden" name="encodedStr" value="">
             </form>
         </main>
     </div>
-
+	<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script>
+ 
+        $(function() {
+            CKEDITOR.replace('editor1', {
+                height : 400
+            });
+        });
+    </script>
+    	<script>
 	$(function() {
-
+   	 $( ".attach-list" ).sortable();
+   	 
 		//return true / false
 		function validateFiles(files){
 			const MAX_COUNT = 5;
@@ -66,6 +96,7 @@
 			}
 			return isValid;
 		}
+		
 		
 		$("#f1").change(function() { //값 변경시
 		//$("#uploadForm").submit(function() {
@@ -96,20 +127,62 @@
 				success : function(data){
 					console.log(data);
 					//확인용
-					for(let a in data){
-					$(".container").append("<p>" + data[a].origin + "</p>");
+					let str = "";
+					let thumbStr = "";
+					for(let a of data){
+					//$(".container").append("<p>" + data[a].origin + "x</p>");
+					str += `<li class="list-group-item d-flex align-items-center justify-content-between"
+						data-uuid="\${a.uuid}"
+						data-origin="\${a.origin}"
+						data-image="\${a.image}"
+						data-path="\${a.path}"
+						data-odr="\${a.odr}"	
+						data-size="\${a.size}"
+					>
+
+						<a href="${cp}/download?uuid=\${a.uuid}&origin=\${a.origin}&path=\${a.path}">\${a.origin}</a>
+						<i class="fa-regular fa-circle-xmark float-end text-danger"></i>
+						</li>`;
+						if(a.image){
+							thumbStr +=	`<div class="my-2 col-12 col-sm-4 col-lg-2"
+								data-uuid="\${a.uuid}"
+							>
+								<div class="my-2 bg-primary" 
+								style="height: 150px; background-size : cover; background-image:url('${cp}/display?uuid=t_\${a.uuid}&path=\${a.path}')">
+									<i class="fa-regular fa-circle-xmark float-end text-danger m-2"></i>
+								</div>
+								</div>`;
+						}
 					}
+					console.log(thumbStr);
+					$(".attach-list").html(str);
+					$(".attach-thumb").html(thumbStr);
+					//이미지인 경우와 아닌 경우
+					
 				}
 			})
 		})
-	})
+		$(".attach-area").on("click", "i", function() {
+			const uuid = $(this).closest("[data-uuid]").data("uuid");
+			console.log(uuid);
+			$("[data-uuid='" + uuid + "']").remove();
+		});
+		
 
-        $(function() {
-            CKEDITOR.replace('editor1', {
-                height : 400
-            });
-        });
-    </script>
+		$("#writeForm").submit(function() {
+			event.preventDefault();
+			const data = [];
+			$(".attach-list li").each(function() {
+				data.push({...this.dataset});
+			});
+			console.log(JSON.stringify(data));
+			data.forEach((item, idx) => item.odr = idx);
+			//item의 odr 을 idx로 덮어쓰기
+			$("[name='encodedStr']").val(JSON.stringify(data));
+			this.submit();
+		})
+	})
+	</script>
 <%@ include file="../common/footer.jsp" %>
 </body>
 </html>

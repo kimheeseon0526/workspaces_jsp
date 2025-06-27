@@ -49,39 +49,26 @@
                <a href="write?${pageDto.cri.qs2}" class="btn btn-primary btn-sm float-end"><i class="fa-solid fa-pen-fancy"></i> 글쓰기</a>
             </div>
           </div>
-           <div class="list-group">
-               <div class="list-group-item small">
-                   <div class="row text-center aligin-items-center small text-muted">
-                       <div class="col-1 small">글번호</div>
-                       <div class="col-1 small">카테고리</div>
-                       <div class="col text-start">제목</div>
-                       <div class="col-1 small">작성일</div>
-                       <div class="col-1 samll">조회수</div>
-                   </div>
-               </div>
-               <a href="board_view.html" class="list-group-item list-group-item-action list-group-item-secondary">
-                   <div class="row text-center align-items-center small text-muted">
-                       <div class="col-1 small">1</div>
-                       <div class="col-1 small">자유</div>
-                       <div class="col text-start text-black">제목</div>
-                       <div class="col-1 small"><span class="samll">25.06.13</span></div>
-                       <div class="col-1 small"><span class="samll">13</span></div>
-                   </div>
-               </a>
-               <c:forEach items="${boards}" var="board">
-                  <a href="view?bno=${board.bno}&${pageDto.cri.qs2}" class="list-group-item list-group-item-action">
-                  <!-- http://localhost:8080/board/view?bno=3430&cno=2&amount=10&type=T&keyword=%EC%83%88%EB%98%A5&page3 -->
-                  <div class="row text-center align-items-center small text-muted">
-                       <div class="col-1 small">${board.bno}</div>
-                       <div class="col-1 small">${board.cno}</div>
-                       <div class="col text-start text-black">${board.title} <span class="small text-danger fw-bold">1</span></div>
-                       <fmt:parseDate value="${board.regdate}" pattern="yyyy-MM-dd HH:mm:ss" var="parsedDate" />
-                       <fmt:formatDate value="${parsedDate}" pattern="yy.MM.dd" /> 
-                       <div class="col-1 small"><span class="small">${board.cnt}</span></div>
-                  </div>
-               	  </a>
-               	</c:forEach>
-               	</div>
+          
+          <c:forEach items="${cate}" var="c">
+          	<c:if  test="${c.cno == pageDto.cri.cno}">
+          		<c:choose>
+	          		<c:when test="${c.getCViewType() == 'GALLERY'}">
+	          		<jsp:include page="list_template/gallery.jsp" />
+	          		</c:when>
+	          		<c:when test="${c.getCViewType() == 'LIST'}">
+	          		<jsp:include page="list_template/list.jsp" />
+	          		</c:when>
+	          		<c:when test="${c.getCViewType() == 'FEED'}">
+	          		
+	          		</c:when>
+
+   				</c:choose>
+ 			</c:if>
+ 		  </c:forEach>
+                	
+               	<%-- <jsp:include page="list_template/list.jsp"/> --%>
+               	
 			    	<ul class="pagination justify-content-center">
 						<c:if test="${pageDto.doubleLeft}">
 							<li class="page-item"><a class="page-link" href="list?page=1&${pageDto.cri.qs}"><i class="fa-solid fa-angles-left"></i></a></li>

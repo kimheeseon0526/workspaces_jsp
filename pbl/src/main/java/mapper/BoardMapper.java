@@ -19,5 +19,7 @@ public interface BoardMapper {
 	void update(Board board);
 
 	void delete(Long bno);
+	
+	void increaseCnt(Long bno);
 
 }

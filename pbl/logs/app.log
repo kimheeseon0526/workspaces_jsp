@@ -1,21 +1,258 @@
-11:37:07.385 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
- {executed in 15 msec}
-11:37:07.415 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, c_view_type=LIST, odr=0, status=ACTIVE)
-11:37:07.421 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, c_view_type=GALLERY, odr=1, status=ACTIVE)
-11:37:07.421 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, c_view_type=LIST, odr=2, status=ACTIVE)
-11:38:46.618 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
- {executed in 14 msec}
-11:38:46.644 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, cViewType=LIST, odr=0, status=ACTIVE)
-11:38:46.653 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, cViewType=GALLERY, odr=1, status=ACTIVE)
-11:38:46.653 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, cViewType=LIST, odr=2, status=ACTIVE)
-11:39:20.438 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
- {executed in 15 msec}
-11:39:20.464 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, cViewType=LIST, odr=0, status=ACTIVE)
-11:39:20.471 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, cViewType=GALLERY, odr=1, status=ACTIVE)
-11:39:20.471 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, cViewType=LIST, odr=2, status=ACTIVE)
-11:39:20.471 [main] INFO  CategoryMapperTest - Category(cno=4, cname=자료실, regdate=2025-06-12 17:16:21, cViewType=LIST, odr=3, status=ACTIVE)
-11:46:34.729 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
- {executed in 15 msec}
-11:46:34.756 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, cViewType=LIST, odr=0, status=ACTIVE)
-11:46:34.765 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, cViewType=GALLERY, odr=1, status=ACTIVE)
-11:46:34.765 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, cViewType=LIST, odr=2, status=ACTIVE)
+09:55:13.258 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+09:55:13.277 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+09:56:08.172 [main] INFO  ParamUtils - null
+09:57:00.646 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+09:57:00.653 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+09:59:09.580 [main] INFO  ParamUtils - equals
+09:59:09.582 [main] INFO  ParamUtils - toString
+09:59:09.582 [main] INFO  ParamUtils - hashCode
+09:59:09.584 [main] INFO  ParamUtils - builder
+09:59:09.584 [main] INFO  ParamUtils - getId
+09:59:09.584 [main] INFO  ParamUtils - getContent
+09:59:09.585 [main] INFO  ParamUtils - getRno
+09:59:09.585 [main] INFO  ParamUtils - setContent
+09:59:09.585 [main] INFO  ParamUtils - setRegdate
+09:59:09.585 [main] INFO  ParamUtils - getRegdate
+09:59:09.585 [main] INFO  ParamUtils - setRno
+09:59:09.585 [main] INFO  ParamUtils - getBno
+09:59:09.585 [main] INFO  ParamUtils - setId
+09:59:09.585 [main] INFO  ParamUtils - setBno
+09:59:09.586 [main] INFO  ParamUtils - getClass
+09:59:09.586 [main] INFO  ParamUtils - notify
+09:59:09.586 [main] INFO  ParamUtils - notifyAll
+09:59:09.586 [main] INFO  ParamUtils - wait
+09:59:09.586 [main] INFO  ParamUtils - wait
+09:59:09.586 [main] INFO  ParamUtils - wait
+09:59:09.586 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+09:59:09.594 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:00:00.736 [main] INFO  ParamUtils - equals
+10:00:00.737 [main] INFO  ParamUtils - toString
+10:00:00.738 [main] INFO  ParamUtils - hashCode
+10:00:00.738 [main] INFO  ParamUtils - builder
+10:00:00.738 [main] INFO  ParamUtils - getId
+10:00:00.738 [main] INFO  ParamUtils - getContent
+10:00:00.738 [main] INFO  ParamUtils - setRegdate
+10:00:00.738 [main] INFO  ParamUtils - setRno
+10:00:00.738 [main] INFO  ParamUtils - setBno
+10:00:00.738 [main] INFO  ParamUtils - canEqual
+10:00:00.738 [main] INFO  ParamUtils - getRno
+10:00:00.738 [main] INFO  ParamUtils - setContent
+10:00:00.738 [main] INFO  ParamUtils - setId
+10:00:00.738 [main] INFO  ParamUtils - getBno
+10:00:00.738 [main] INFO  ParamUtils - getRegdate
+10:00:00.739 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:00:00.747 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:01:34.783 [main] INFO  ParamUtils - setBno
+10:01:34.785 [main] INFO  ParamUtils - getRno
+10:01:34.785 [main] INFO  ParamUtils - getRegdate
+10:01:34.785 [main] INFO  ParamUtils - setId
+10:01:34.785 [main] INFO  ParamUtils - setRegdate
+10:01:34.786 [main] INFO  ParamUtils - setRno
+10:01:34.786 [main] INFO  ParamUtils - canEqual
+10:01:34.786 [main] INFO  ParamUtils - setContent
+10:01:34.786 [main] INFO  ParamUtils - getBno
+10:01:34.786 [main] INFO  ParamUtils - equals
+10:01:34.786 [main] INFO  ParamUtils - toString
+10:01:34.786 [main] INFO  ParamUtils - hashCode
+10:01:34.786 [main] INFO  ParamUtils - builder
+10:01:34.786 [main] INFO  ParamUtils - getId
+10:01:34.786 [main] INFO  ParamUtils - getContent
+10:01:34.786 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=100)
+10:01:34.794 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=100)
+10:02:06.937 [main] INFO  ParamUtils - setBno
+10:02:06.940 [main] INFO  ParamUtils - equals
+10:02:06.940 [main] INFO  ParamUtils - toString
+10:02:06.940 [main] INFO  ParamUtils - hashCode
+10:02:06.940 [main] INFO  ParamUtils - builder
+10:02:06.940 [main] INFO  ParamUtils - getId
+10:02:06.940 [main] INFO  ParamUtils - getContent
+10:02:06.940 [main] INFO  ParamUtils - getRegdate
+10:02:06.940 [main] INFO  ParamUtils - getBno
+10:02:06.940 [main] INFO  ParamUtils - getRno
+10:02:06.940 [main] INFO  ParamUtils - setContent
+10:02:06.940 [main] INFO  ParamUtils - canEqual
+10:02:06.941 [main] INFO  ParamUtils - setRno
+10:02:06.941 [main] INFO  ParamUtils - setRegdate
+10:02:06.941 [main] INFO  ParamUtils - setId
+10:02:06.941 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=4092)
+10:02:06.948 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=4092)
+10:02:16.165 [main] INFO  ParamUtils - equals
+10:02:16.166 [main] INFO  ParamUtils - toString
+10:02:16.166 [main] INFO  ParamUtils - hashCode
+10:02:16.166 [main] INFO  ParamUtils - builder
+10:02:16.166 [main] INFO  ParamUtils - getId
+10:02:16.166 [main] INFO  ParamUtils - getContent
+10:02:16.166 [main] INFO  ParamUtils - setBno
+10:02:16.167 [main] INFO  ParamUtils - setRegdate
+10:02:16.167 [main] INFO  ParamUtils - setContent
+10:02:16.167 [main] INFO  ParamUtils - setRno
+10:02:16.167 [main] INFO  ParamUtils - getRno
+10:02:16.167 [main] INFO  ParamUtils - canEqual
+10:02:16.167 [main] INFO  ParamUtils - getBno
+10:02:16.167 [main] INFO  ParamUtils - setId
+10:02:16.167 [main] INFO  ParamUtils - getRegdate
+10:02:16.168 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=1)
+10:02:16.175 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=1)
+10:02:25.272 [main] INFO  ParamUtils - setBno
+10:02:25.273 [main] INFO  ParamUtils - equals
+10:02:25.274 [main] INFO  ParamUtils - toString
+10:02:25.274 [main] INFO  ParamUtils - hashCode
+10:02:25.274 [main] INFO  ParamUtils - builder
+10:02:25.274 [main] INFO  ParamUtils - getId
+10:02:25.274 [main] INFO  ParamUtils - getContent
+10:02:25.274 [main] INFO  ParamUtils - getRegdate
+10:02:25.274 [main] INFO  ParamUtils - setId
+10:02:25.274 [main] INFO  ParamUtils - setRegdate
+10:02:25.274 [main] INFO  ParamUtils - setContent
+10:02:25.274 [main] INFO  ParamUtils - getRno
+10:02:25.274 [main] INFO  ParamUtils - setRno
+10:02:25.275 [main] INFO  ParamUtils - canEqual
+10:02:25.275 [main] INFO  ParamUtils - getBno
+10:02:25.275 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=5)
+10:02:25.281 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=5)
+10:04:09.011 [main] INFO  ParamUtils - rno
+10:04:09.012 [main] INFO  ParamUtils - content
+10:04:09.012 [main] INFO  ParamUtils - id
+10:04:09.012 [main] INFO  ParamUtils - regdate
+10:04:09.012 [main] INFO  ParamUtils - bno
+10:04:09.012 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:04:09.021 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:04:49.955 [main] INFO  ParamUtils - {}
+10:04:49.957 [main] INFO  ParamUtils - {}
+10:04:49.957 [main] INFO  ParamUtils - {}
+10:04:49.957 [main] INFO  ParamUtils - {}
+10:04:49.957 [main] INFO  ParamUtils - {}
+10:04:49.957 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:04:49.962 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
+10:05:37.061 [main] INFO  ParamUtils - {}
+10:05:37.064 [main] INFO  ParamUtils - {}
+10:05:37.064 [main] INFO  ParamUtils - {}
+10:05:37.064 [main] INFO  ParamUtils - {}
+10:05:37.064 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - {}
+10:05:37.065 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:05:37.077 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:05:57.944 [main] INFO  ParamUtils - {}
+10:05:57.946 [main] INFO  ParamUtils - {}
+10:05:57.946 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - {}
+10:05:57.947 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:06:41.614 [main] INFO  ParamUtils - {}
+10:06:41.617 [main] INFO  ParamUtils - null
+10:08:22.819 [main] INFO  ParamUtils - bno,class java.lang.Long
+10:08:22.824 [main] INFO  ParamUtils - title,class java.lang.String
+10:08:22.825 [main] INFO  ParamUtils - content,class java.lang.String
+10:08:22.825 [main] INFO  ParamUtils - id,class java.lang.String
+10:08:22.825 [main] INFO  ParamUtils - regdate,class java.lang.String
+10:08:22.826 [main] INFO  ParamUtils - moddate,class java.lang.String
+10:08:22.826 [main] INFO  ParamUtils - cnt,class java.lang.Integer
+10:08:22.826 [main] INFO  ParamUtils - cno,class java.lang.Integer
+10:08:22.826 [main] INFO  ParamUtils - replyCnt,int
+10:08:22.827 [main] INFO  ParamUtils - attachCnt,int
+10:08:22.827 [main] INFO  ParamUtils - attachs,interface java.util.List
+10:08:22.827 [main] INFO  ParamUtils - Board(bno=10, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
+10:16:21.346 [main] INFO  ParamUtils - bno,class java.lang.Long
+10:16:21.351 [main] INFO  ParamUtils - null
+15:05:43.734 [main] INFO  BoardMapperTest - [T, I]
+15:05:43.747 [main] INFO  BoardMapperTest - null
+15:15:01.009 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+	from tbl_board b
+	left join tbl_attach a using(bno)
+	where bno = 4127
+	order by odr
+ {executed in 9 msec}
+15:15:01.038 [main] INFO  sqltiming - select COALESCE(max(seq),1) 
+  	from tbl_board b
+	where grp = 4127
+	and seq > 1
+	and depth > 1
+	and not exists (
+		select 1
+		from tbl_board mid
+		where grp = b.grp
+		and seq > 1
+		and seq < b.seq	
+		and depth <= 1
+)
+ {executed in 6 msec}
+15:15:01.039 [main] INFO  BoardMapperTest - 1
+15:15:01.053 [main] INFO  BoardMapperTest - [T, I]
+15:15:01.092 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path,
+  	grp, seq, depth
+  	from tbl_board b
+
+  	 WHERE cno = 2
+
+  			and (
+
+  					title like concat('%', '새똥' , '%')
+
+  				or
+  					id like concat('%', '새똥' , '%')
+
+  			) 
+
+  	order by grp desc, seq
+  	limit 10 offset 20
+ {executed in 8 msec}
+15:15:01.105 [main] INFO  BoardMapperTest - null
+15:15:01.126 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
+  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
+	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
+	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
+	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path,
+  	grp, seq, depth
+  	from tbl_board b
+
+  	 WHERE cno = 2 
+
+  	order by grp desc, seq
+  	limit 10 offset 0
+ {executed in 7 msec}
+15:15:01.133 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.133 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.133 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=404af714-3773-414f-b62f-9334af384fc9.jpg, path=2025/06/30, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
+15:15:01.144 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.145 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.145 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.148 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.148 [main] INFO  BoardMapperTest - 0 0 []
+15:15:01.148 [main] INFO  BoardMapperTest - 3 0 [Attach(uuid=072111f0-d900-4b66-a4d2-29e7d416e4e9.jpg, path=2025/06/27, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
+15:15:01.148 [main] INFO  BoardMapperTest - 5 0 [Attach(uuid=fae5e549-d426-40c9-aa20-251bdc6e219e.png, path=2025/06/27, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
+15:15:01.178 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+	from tbl_board b
+	left join tbl_attach a using(bno)
+	where bno = 4096
+	order by odr
+ {executed in 7 msec}
+15:15:01.183 [main] INFO  BoardMapperTest - Board(bno=4096, title=0626 몽요일몽, content=<p>몽요일이당</p>
+, id=qwe, regdate=2025-06-26 09:37:10, moddate=2025-06-26 09:37:10, cnt=16, cno=2, replyCnt=0, attachCnt=0, grp=4096, seq=1, depth=1, attachs=[Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=true, origin=다운로드 222.jpg, bno=4096, rno=null, odr=0, size=0), Attach(uuid=f63074f0-3633-468e-9362-323df2faf9dc.jpg, path=2025/06/26, image=true, origin=다운로드.jpg, bno=4096, rno=null, odr=1, size=0), Attach(uuid=bb3826b4-6987-4350-b5be-e4b2ac7d74ae, path=2025/06/26, image=false, origin=새 텍스트 문서, bno=4096, rno=null, odr=2, size=0)])
+15:15:01.223 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
+	from tbl_board b
+	left join tbl_attach a using(bno)
+	where bno = 50
+	order by odr
+ {executed in 7 msec}
+15:15:01.232 [main] INFO  sqltiming - update tbl_board set
+  	title = '제목만 수정수정', 
+  	content = '술먹자 술~',
+  	moddate = now(),
+  	cno = 2
+  	where bno = 50
+ {executed in 8 msec}

@@ -1,0 +1,21 @@
+11:37:07.385 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
+ {executed in 15 msec}
+11:37:07.415 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, c_view_type=LIST, odr=0, status=ACTIVE)
+11:37:07.421 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, c_view_type=GALLERY, odr=1, status=ACTIVE)
+11:37:07.421 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, c_view_type=LIST, odr=2, status=ACTIVE)
+11:38:46.618 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
+ {executed in 14 msec}
+11:38:46.644 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, cViewType=LIST, odr=0, status=ACTIVE)
+11:38:46.653 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, cViewType=GALLERY, odr=1, status=ACTIVE)
+11:38:46.653 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, cViewType=LIST, odr=2, status=ACTIVE)
+11:39:20.438 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
+ {executed in 15 msec}
+11:39:20.464 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, cViewType=LIST, odr=0, status=ACTIVE)
+11:39:20.471 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, cViewType=GALLERY, odr=1, status=ACTIVE)
+11:39:20.471 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, cViewType=LIST, odr=2, status=ACTIVE)
+11:39:20.471 [main] INFO  CategoryMapperTest - Category(cno=4, cname=자료실, regdate=2025-06-12 17:16:21, cViewType=LIST, odr=3, status=ACTIVE)
+11:46:34.729 [main] INFO  sqltiming - select * from tbl_category tc where tc.status = 'ACTIVE' order by odr;
+ {executed in 15 msec}
+11:46:34.756 [main] INFO  CategoryMapperTest - Category(cno=1, cname=갤러리, regdate=2025-06-12 17:15:51, cViewType=LIST, odr=0, status=ACTIVE)
+11:46:34.765 [main] INFO  CategoryMapperTest - Category(cno=2, cname=자유게시판, regdate=2025-06-12 17:16:19, cViewType=GALLERY, odr=1, status=ACTIVE)
+11:46:34.765 [main] INFO  CategoryMapperTest - Category(cno=3, cname=QnA, regdate=2025-06-12 17:16:20, cViewType=LIST, odr=2, status=ACTIVE)

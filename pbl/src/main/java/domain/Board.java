@@ -29,6 +29,15 @@ public class Board {
 	private int replyCnt;
 	private int attachCnt;
 	
+	//답글을 위한 3개읠 필드
+	private Long grp; //null 가능성 때문에 대문자
+	@Builder.Default
+	private int seq = 1;
+	@Builder.Default
+	private int depth = 1;
+	
+	
+	
 	
 
 

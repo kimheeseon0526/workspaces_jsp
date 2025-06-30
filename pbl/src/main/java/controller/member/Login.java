@@ -1,6 +1,7 @@
 package controller.member;
 
 import java.io.IOException;
+
 import java.net.URLDecoder;
 
 import javax.servlet.ServletException;
@@ -10,9 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import domain.Member;
 import domain.dto.Criteria;
 import lombok.extern.slf4j.Slf4j;
 import service.MemberService;
+import util.ParamUtil;
 
 @WebServlet("/member/login")
 @Slf4j
@@ -27,16 +30,16 @@ public class Login extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		//login.jsp에서의 입력값을 저장
-		String id = req.getParameter("id");
-		String pw = req.getParameter("pw");
+//		String id = req.getParameter("id");
+//		String pw = req.getParameter("pw");
+		Member member = ParamUtil.get(req, Member.class);
+		boolean ret = new MemberService().login(member.getId(), member.getPw());
+
 		
-		log.info("{} {}", id, pw);
-		
-		boolean ret = new MemberService().login(id, pw);
 		if(ret) {//로그인 성공 -> 세션에 유저 정보 저장
 			HttpSession session =  req.getSession();
 			session.setMaxInactiveInterval(60 * 10); //10분 유지
-			session.setAttribute("member", new MemberService().findById(id));
+			session.setAttribute("member", new MemberService().findById(member.getId()));
 			
 			String url = req.getParameter("url");
 			if(url == null) {

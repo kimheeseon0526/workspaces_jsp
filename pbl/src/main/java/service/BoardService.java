@@ -43,7 +43,30 @@ public class BoardService {
 		SqlSession session = MybatisUtil.getSqlSession(false);
 		try {
 			BoardMapper mapper = session.getMapper(BoardMapper.class);
-			mapper.insert(board);
+			Long bno = board.getBno();
+			if(bno == null) {	//답글 아닌 신규글
+				mapper.insert(board);
+				mapper.updateGrpMyself(board);
+				
+			}else {	//답글
+				//1부모글 조회
+				Board parent =  mapper.selectOne(bno);
+				Long grp = parent.getGrp();
+				int seq = parent.getSeq();
+				int depth = parent.getDepth();
+				//내 위치에 작성하기 위한 update 처리(위치 재조정)
+				
+				//2.maxSeq취득
+				int maxSeq = mapper.selectMaxSeq(parent);
+				board.setSeq(maxSeq + 1);	//수정필요 
+				//3.해당 조건의 게시글들의 seq 밀어내기
+				board.setGrp(parent.getGrp());	//확정
+				board.setDepth(parent.getDepth() + 1);	//확정
+				mapper.updateSeqIncrease(board);	//수정필요			
+				//4.내 insert
+				mapper.insertChild(board);
+			}
+
 			AttachMapper attachmapper = session.getMapper(AttachMapper.class);
 			board.getAttachs().forEach(a -> {	//board안에 있는 attachs list 가져와서 그 안에서 bno 추출
 				a.setBno(board.getBno());

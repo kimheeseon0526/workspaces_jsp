@@ -1,7 +1,10 @@
 package domain;
 
+import java.io.File;
+
 import org.apache.ibatis.type.Alias;
 
+import controller.attach.UploadFile;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,7 +37,15 @@ public class Attach {
 		this.size = size;
 	}
 	
-
+	public File toFile() {
+		//물리적 경로에 있는 파일명
+		//path : 자기 인스턴스에 있는 path 가져옴
+		return new File(UploadFile.UPLOAD_PATH + "/" + path, uuid);
+	}
+	
+	public Attach toThumb() {
+		return Attach.builder().bno(bno).image(image).uuid("t_" + uuid).path(path).origin(origin).odr(odr).size(size).build();
+	}
 	
 	
 	

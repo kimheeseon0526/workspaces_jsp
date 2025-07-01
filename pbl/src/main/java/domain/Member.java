@@ -13,12 +13,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Alias("member")
 public class Member {
-	
-	private Long no;
-	private String id;
-	private String pw;
-	private String name;
-	private String email;
-	private String regdate;
+
+    private Long no;
+    private String id;
+    private String pw;
+    private String name;
+    private String email;
+    private String regdate;
+
 	
 }

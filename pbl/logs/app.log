@@ -1,258 +1,169 @@
-09:55:13.258 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
-09:55:13.277 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
-09:56:08.172 [main] INFO  ParamUtils - null
-09:57:00.646 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-09:57:00.653 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-09:59:09.580 [main] INFO  ParamUtils - equals
-09:59:09.582 [main] INFO  ParamUtils - toString
-09:59:09.582 [main] INFO  ParamUtils - hashCode
-09:59:09.584 [main] INFO  ParamUtils - builder
-09:59:09.584 [main] INFO  ParamUtils - getId
-09:59:09.584 [main] INFO  ParamUtils - getContent
-09:59:09.585 [main] INFO  ParamUtils - getRno
-09:59:09.585 [main] INFO  ParamUtils - setContent
-09:59:09.585 [main] INFO  ParamUtils - setRegdate
-09:59:09.585 [main] INFO  ParamUtils - getRegdate
-09:59:09.585 [main] INFO  ParamUtils - setRno
-09:59:09.585 [main] INFO  ParamUtils - getBno
-09:59:09.585 [main] INFO  ParamUtils - setId
-09:59:09.585 [main] INFO  ParamUtils - setBno
-09:59:09.586 [main] INFO  ParamUtils - getClass
-09:59:09.586 [main] INFO  ParamUtils - notify
-09:59:09.586 [main] INFO  ParamUtils - notifyAll
-09:59:09.586 [main] INFO  ParamUtils - wait
-09:59:09.586 [main] INFO  ParamUtils - wait
-09:59:09.586 [main] INFO  ParamUtils - wait
-09:59:09.586 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-09:59:09.594 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:00:00.736 [main] INFO  ParamUtils - equals
-10:00:00.737 [main] INFO  ParamUtils - toString
-10:00:00.738 [main] INFO  ParamUtils - hashCode
-10:00:00.738 [main] INFO  ParamUtils - builder
-10:00:00.738 [main] INFO  ParamUtils - getId
-10:00:00.738 [main] INFO  ParamUtils - getContent
-10:00:00.738 [main] INFO  ParamUtils - setRegdate
-10:00:00.738 [main] INFO  ParamUtils - setRno
-10:00:00.738 [main] INFO  ParamUtils - setBno
-10:00:00.738 [main] INFO  ParamUtils - canEqual
-10:00:00.738 [main] INFO  ParamUtils - getRno
-10:00:00.738 [main] INFO  ParamUtils - setContent
-10:00:00.738 [main] INFO  ParamUtils - setId
-10:00:00.738 [main] INFO  ParamUtils - getBno
-10:00:00.738 [main] INFO  ParamUtils - getRegdate
-10:00:00.739 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:00:00.747 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:01:34.783 [main] INFO  ParamUtils - setBno
-10:01:34.785 [main] INFO  ParamUtils - getRno
-10:01:34.785 [main] INFO  ParamUtils - getRegdate
-10:01:34.785 [main] INFO  ParamUtils - setId
-10:01:34.785 [main] INFO  ParamUtils - setRegdate
-10:01:34.786 [main] INFO  ParamUtils - setRno
-10:01:34.786 [main] INFO  ParamUtils - canEqual
-10:01:34.786 [main] INFO  ParamUtils - setContent
-10:01:34.786 [main] INFO  ParamUtils - getBno
-10:01:34.786 [main] INFO  ParamUtils - equals
-10:01:34.786 [main] INFO  ParamUtils - toString
-10:01:34.786 [main] INFO  ParamUtils - hashCode
-10:01:34.786 [main] INFO  ParamUtils - builder
-10:01:34.786 [main] INFO  ParamUtils - getId
-10:01:34.786 [main] INFO  ParamUtils - getContent
-10:01:34.786 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=100)
-10:01:34.794 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=100)
-10:02:06.937 [main] INFO  ParamUtils - setBno
-10:02:06.940 [main] INFO  ParamUtils - equals
-10:02:06.940 [main] INFO  ParamUtils - toString
-10:02:06.940 [main] INFO  ParamUtils - hashCode
-10:02:06.940 [main] INFO  ParamUtils - builder
-10:02:06.940 [main] INFO  ParamUtils - getId
-10:02:06.940 [main] INFO  ParamUtils - getContent
-10:02:06.940 [main] INFO  ParamUtils - getRegdate
-10:02:06.940 [main] INFO  ParamUtils - getBno
-10:02:06.940 [main] INFO  ParamUtils - getRno
-10:02:06.940 [main] INFO  ParamUtils - setContent
-10:02:06.940 [main] INFO  ParamUtils - canEqual
-10:02:06.941 [main] INFO  ParamUtils - setRno
-10:02:06.941 [main] INFO  ParamUtils - setRegdate
-10:02:06.941 [main] INFO  ParamUtils - setId
-10:02:06.941 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=4092)
-10:02:06.948 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=4092)
-10:02:16.165 [main] INFO  ParamUtils - equals
-10:02:16.166 [main] INFO  ParamUtils - toString
-10:02:16.166 [main] INFO  ParamUtils - hashCode
-10:02:16.166 [main] INFO  ParamUtils - builder
-10:02:16.166 [main] INFO  ParamUtils - getId
-10:02:16.166 [main] INFO  ParamUtils - getContent
-10:02:16.166 [main] INFO  ParamUtils - setBno
-10:02:16.167 [main] INFO  ParamUtils - setRegdate
-10:02:16.167 [main] INFO  ParamUtils - setContent
-10:02:16.167 [main] INFO  ParamUtils - setRno
-10:02:16.167 [main] INFO  ParamUtils - getRno
-10:02:16.167 [main] INFO  ParamUtils - canEqual
-10:02:16.167 [main] INFO  ParamUtils - getBno
-10:02:16.167 [main] INFO  ParamUtils - setId
-10:02:16.167 [main] INFO  ParamUtils - getRegdate
-10:02:16.168 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=1)
-10:02:16.175 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=1)
-10:02:25.272 [main] INFO  ParamUtils - setBno
-10:02:25.273 [main] INFO  ParamUtils - equals
-10:02:25.274 [main] INFO  ParamUtils - toString
-10:02:25.274 [main] INFO  ParamUtils - hashCode
-10:02:25.274 [main] INFO  ParamUtils - builder
-10:02:25.274 [main] INFO  ParamUtils - getId
-10:02:25.274 [main] INFO  ParamUtils - getContent
-10:02:25.274 [main] INFO  ParamUtils - getRegdate
-10:02:25.274 [main] INFO  ParamUtils - setId
-10:02:25.274 [main] INFO  ParamUtils - setRegdate
-10:02:25.274 [main] INFO  ParamUtils - setContent
-10:02:25.274 [main] INFO  ParamUtils - getRno
-10:02:25.274 [main] INFO  ParamUtils - setRno
-10:02:25.275 [main] INFO  ParamUtils - canEqual
-10:02:25.275 [main] INFO  ParamUtils - getBno
-10:02:25.275 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=5)
-10:02:25.281 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=5)
-10:04:09.011 [main] INFO  ParamUtils - rno
-10:04:09.012 [main] INFO  ParamUtils - content
-10:04:09.012 [main] INFO  ParamUtils - id
-10:04:09.012 [main] INFO  ParamUtils - regdate
-10:04:09.012 [main] INFO  ParamUtils - bno
-10:04:09.012 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:04:09.021 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:04:49.955 [main] INFO  ParamUtils - {}
-10:04:49.957 [main] INFO  ParamUtils - {}
-10:04:49.957 [main] INFO  ParamUtils - {}
-10:04:49.957 [main] INFO  ParamUtils - {}
-10:04:49.957 [main] INFO  ParamUtils - {}
-10:04:49.957 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:04:49.962 [main] INFO  ParamUtils - Reply(rno=null, content=null, id=null, regdate=null, bno=null)
-10:05:37.061 [main] INFO  ParamUtils - {}
-10:05:37.064 [main] INFO  ParamUtils - {}
-10:05:37.064 [main] INFO  ParamUtils - {}
-10:05:37.064 [main] INFO  ParamUtils - {}
-10:05:37.064 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - {}
-10:05:37.065 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
-10:05:37.077 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
-10:05:57.944 [main] INFO  ParamUtils - {}
-10:05:57.946 [main] INFO  ParamUtils - {}
-10:05:57.946 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - {}
-10:05:57.947 [main] INFO  ParamUtils - Board(bno=null, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
-10:06:41.614 [main] INFO  ParamUtils - {}
-10:06:41.617 [main] INFO  ParamUtils - null
-10:08:22.819 [main] INFO  ParamUtils - bno,class java.lang.Long
-10:08:22.824 [main] INFO  ParamUtils - title,class java.lang.String
-10:08:22.825 [main] INFO  ParamUtils - content,class java.lang.String
-10:08:22.825 [main] INFO  ParamUtils - id,class java.lang.String
-10:08:22.825 [main] INFO  ParamUtils - regdate,class java.lang.String
-10:08:22.826 [main] INFO  ParamUtils - moddate,class java.lang.String
-10:08:22.826 [main] INFO  ParamUtils - cnt,class java.lang.Integer
-10:08:22.826 [main] INFO  ParamUtils - cno,class java.lang.Integer
-10:08:22.826 [main] INFO  ParamUtils - replyCnt,int
-10:08:22.827 [main] INFO  ParamUtils - attachCnt,int
-10:08:22.827 [main] INFO  ParamUtils - attachs,interface java.util.List
-10:08:22.827 [main] INFO  ParamUtils - Board(bno=10, title=null, content=null, id=null, regdate=null, moddate=null, cnt=null, cno=null, replyCnt=0, attachCnt=0, attachs=[])
-10:16:21.346 [main] INFO  ParamUtils - bno,class java.lang.Long
-10:16:21.351 [main] INFO  ParamUtils - null
-15:05:43.734 [main] INFO  BoardMapperTest - [T, I]
-15:05:43.747 [main] INFO  BoardMapperTest - null
-15:15:01.009 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
-	from tbl_board b
-	left join tbl_attach a using(bno)
-	where bno = 4127
-	order by odr
- {executed in 9 msec}
-15:15:01.038 [main] INFO  sqltiming - select COALESCE(max(seq),1) 
-  	from tbl_board b
-	where grp = 4127
-	and seq > 1
-	and depth > 1
-	and not exists (
-		select 1
-		from tbl_board mid
-		where grp = b.grp
-		and seq > 1
-		and seq < b.seq	
-		and depth <= 1
-)
+09:55:25.985 [main] INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+09:55:25.996 [main] INFO  SimpleThreadPool - Job execution threads will use class loader of thread: main
+09:55:26.015 [main] INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+09:55:26.018 [main] INFO  QuartzScheduler - Quartz Scheduler v2.5.0 created.
+09:55:26.019 [main] INFO  RAMJobStore - RAMJobStore initialized.
+09:55:26.021 [main] INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.5.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+09:55:26.023 [main] INFO  StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+09:55:26.023 [main] INFO  StdSchedulerFactory - Quartz scheduler version: 2.5.0
+09:55:39.948 [main] INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+09:55:39.953 [main] INFO  SimpleThreadPool - Job execution threads will use class loader of thread: main
+09:55:39.970 [main] INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+09:55:39.975 [main] INFO  QuartzScheduler - Quartz Scheduler v2.5.0 created.
+09:55:39.976 [main] INFO  RAMJobStore - RAMJobStore initialized.
+09:55:39.977 [main] INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.5.0) 'DefaultQuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+09:55:39.977 [main] INFO  StdSchedulerFactory - Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+09:55:39.978 [main] INFO  StdSchedulerFactory - Quartz scheduler version: 2.5.0
+09:55:39.991 [main] INFO  QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+09:55:40.006 [DefaultQuartzScheduler_Worker-1] INFO  TimerJob - Tue Jul 01 09:55:40 KST 2025
+09:55:45.003 [DefaultQuartzScheduler_Worker-2] INFO  TimerJob - Tue Jul 01 09:55:45 KST 2025
+09:55:50.000 [DefaultQuartzScheduler_Worker-3] INFO  TimerJob - Tue Jul 01 09:55:50 KST 2025
+09:55:55.006 [DefaultQuartzScheduler_Worker-4] INFO  TimerJob - Tue Jul 01 09:55:55 KST 2025
+09:56:00.010 [DefaultQuartzScheduler_Worker-5] INFO  TimerJob - Tue Jul 01 09:56:00 KST 2025
+09:56:05.002 [DefaultQuartzScheduler_Worker-6] INFO  TimerJob - Tue Jul 01 09:56:05 KST 2025
+09:56:10.001 [DefaultQuartzScheduler_Worker-7] INFO  TimerJob - Tue Jul 01 09:56:10 KST 2025
+09:56:15.002 [DefaultQuartzScheduler_Worker-8] INFO  TimerJob - Tue Jul 01 09:56:15 KST 2025
+09:56:20.000 [DefaultQuartzScheduler_Worker-9] INFO  TimerJob - Tue Jul 01 09:56:20 KST 2025
+09:56:25.001 [DefaultQuartzScheduler_Worker-10] INFO  TimerJob - Tue Jul 01 09:56:25 KST 2025
+09:56:30.001 [DefaultQuartzScheduler_Worker-1] INFO  TimerJob - Tue Jul 01 09:56:30 KST 2025
+09:56:35.002 [DefaultQuartzScheduler_Worker-2] INFO  TimerJob - Tue Jul 01 09:56:35 KST 2025
+09:56:40.001 [DefaultQuartzScheduler_Worker-3] INFO  TimerJob - Tue Jul 01 09:56:40 KST 2025
+09:56:40.005 [main] INFO  QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+09:56:40.006 [main] INFO  QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+09:56:40.009 [main] INFO  QuartzScheduler - Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+10:35:04.706 [main] INFO  GhostFileCleanupJob - D:\upload\files\2025
+10:42:10.242 [main] INFO  GhostFileCleanupJob - D:\upload\files\2025\06\30, true
+10:42:10.244 [main] INFO  GhostFileCleanupJob - [18898bde-13b3-426b-94ef-a786bbf22336.jpg, 404af714-3773-414f-b62f-9334af384fc9.jpg, t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:00:06.522 [main] INFO  GhostFileCleanupJob - D:\upload\files\2025\06\30, true
+11:00:06.525 [main] INFO  GhostFileCleanupJob - [18898bde-13b3-426b-94ef-a786bbf22336.jpg, 404af714-3773-414f-b62f-9334af384fc9.jpg, t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:00:06.525 [main] INFO  GhostFileCleanupJob - [b.txt]
+11:00:16.893 [main] INFO  GhostFileCleanupJob - D:\upload\files\2025\06\30, true
+11:00:16.896 [main] INFO  GhostFileCleanupJob - [18898bde-13b3-426b-94ef-a786bbf22336.jpg, 404af714-3773-414f-b62f-9334af384fc9.jpg, t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:00:16.896 [main] INFO  GhostFileCleanupJob - [10\a.txt, b.txt]
+11:00:48.125 [main] INFO  GhostFileCleanupJob - D:\upload\files\2025\06\30, true
+11:00:48.129 [main] INFO  GhostFileCleanupJob - [18898bde-13b3-426b-94ef-a786bbf22336.jpg, 404af714-3773-414f-b62f-9334af384fc9.jpg, t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:00:48.129 [main] INFO  GhostFileCleanupJob - [10\a.txt, b.txt]
+11:19:05.565 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+11:19:05.567 [main] INFO  GhostFileCleanupJob - [15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, 18898bde-13b3-426b-94ef-a786bbf22336.jpg, 404af714-3773-414f-b62f-9334af384fc9.jpg, f395f612-b177-4b1f-915b-c9f66db5cd67.sql, t_15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:19:06.710 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d');
+ {executed in 7 msec}
+11:19:06.734 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, d:\upload\files\2025\06\30\18898bde-13b3-426b-94ef-a786bbf22336.jpg, d:\upload\files\2025\06\30\404af714-3773-414f-b62f-9334af384fc9.jpg, d:\upload\files\2025\06\30\f395f612-b177-4b1f-915b-c9f66db5cd67.sql, d:\upload\files\2025\06\30\t_15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, d:\upload\files\2025\06\30\t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, d:\upload\files\2025\06\30\t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:19:32.521 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+11:19:32.525 [main] INFO  GhostFileCleanupJob - [15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, 18898bde-13b3-426b-94ef-a786bbf22336.jpg, 404af714-3773-414f-b62f-9334af384fc9.jpg, f395f612-b177-4b1f-915b-c9f66db5cd67.sql, t_15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:19:33.164 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d');
+ {executed in 7 msec}
+11:19:33.190 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, d:\upload\files\2025\06\30\18898bde-13b3-426b-94ef-a786bbf22336.jpg, d:\upload\files\2025\06\30\404af714-3773-414f-b62f-9334af384fc9.jpg, d:\upload\files\2025\06\30\f395f612-b177-4b1f-915b-c9f66db5cd67.sql, d:\upload\files\2025\06\30\t_15d15929-b3c1-411d-a211-8aa940e59ffc.jpg, d:\upload\files\2025\06\30\t_18898bde-13b3-426b-94ef-a786bbf22336.jpg, d:\upload\files\2025\06\30\t_404af714-3773-414f-b62f-9334af384fc9.jpg]
+11:58:10.536 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+11:58:10.539 [main] INFO  GhostFileCleanupJob - []
+11:58:11.205 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 14 msec}
+11:58:11.228 [main] INFO  GhostFileCleanupJob - []
+11:59:53.514 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+11:59:53.517 [main] INFO  GhostFileCleanupJob - [1104f520-624a-486a-9eb9-771f5d614161.xlsx, 28cd8ce7-fe2e-42ce-9034-9f641759400c.jpg, 38d696d3-0caa-4a61-9711-0a5f26b18d03.sql, 3d2d0616-ad4c-4dc3-897c-94cb85a2cb45.xlsx, 3f180652-555a-436e-922a-fe05f4029dd2.xlsx, 4535377d-78ce-43f4-b327-2288fde9552e.xlsx, 4721676b-e44b-42d7-a8a3-9b14eddfbbb0.jpg, 72a30519-72f9-4ed0-adf1-e5aceafe8c48.xlsx, 89dccaff-d4ef-4e11-bb22-de26fdd2b987.sql, 93498c10-793b-4e45-8225-f2af373dc72e.jpg, dc6444de-86d9-43c1-be9e-dde0edf6bfae.jpg, t_28cd8ce7-fe2e-42ce-9034-9f641759400c.jpg, t_4721676b-e44b-42d7-a8a3-9b14eddfbbb0.jpg, t_93498c10-793b-4e45-8225-f2af373dc72e.jpg, t_dc6444de-86d9-43c1-be9e-dde0edf6bfae.jpg]
+11:59:54.154 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 7 msec}
+11:59:54.182 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\1104f520-624a-486a-9eb9-771f5d614161.xlsx, d:\upload\files\2025\06\30\28cd8ce7-fe2e-42ce-9034-9f641759400c.jpg, d:\upload\files\2025\06\30\38d696d3-0caa-4a61-9711-0a5f26b18d03.sql, d:\upload\files\2025\06\30\3d2d0616-ad4c-4dc3-897c-94cb85a2cb45.xlsx, d:\upload\files\2025\06\30\3f180652-555a-436e-922a-fe05f4029dd2.xlsx, d:\upload\files\2025\06\30\4535377d-78ce-43f4-b327-2288fde9552e.xlsx, d:\upload\files\2025\06\30\4721676b-e44b-42d7-a8a3-9b14eddfbbb0.jpg, d:\upload\files\2025\06\30\72a30519-72f9-4ed0-adf1-e5aceafe8c48.xlsx, d:\upload\files\2025\06\30\89dccaff-d4ef-4e11-bb22-de26fdd2b987.sql, d:\upload\files\2025\06\30\93498c10-793b-4e45-8225-f2af373dc72e.jpg, d:\upload\files\2025\06\30\dc6444de-86d9-43c1-be9e-dde0edf6bfae.jpg, d:\upload\files\2025\06\30\t_28cd8ce7-fe2e-42ce-9034-9f641759400c.jpg, d:\upload\files\2025\06\30\t_4721676b-e44b-42d7-a8a3-9b14eddfbbb0.jpg, d:\upload\files\2025\06\30\t_93498c10-793b-4e45-8225-f2af373dc72e.jpg, d:\upload\files\2025\06\30\t_dc6444de-86d9-43c1-be9e-dde0edf6bfae.jpg]
+12:05:34.731 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:05:34.735 [main] INFO  GhostFileCleanupJob - []
+12:05:35.399 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
  {executed in 6 msec}
-15:15:01.039 [main] INFO  BoardMapperTest - 1
-15:15:01.053 [main] INFO  BoardMapperTest - [T, I]
-15:15:01.092 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
-  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
-	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
-	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
-	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path,
-  	grp, seq, depth
-  	from tbl_board b
-
-  	 WHERE cno = 2
-
-  			and (
-
-  					title like concat('%', '새똥' , '%')
-
-  				or
-  					id like concat('%', '새똥' , '%')
-
-  			) 
-
-  	order by grp desc, seq
-  	limit 10 offset 20
- {executed in 8 msec}
-15:15:01.105 [main] INFO  BoardMapperTest - null
-15:15:01.126 [main] INFO  sqltiming - select bno, title, content, id, regdate , moddate, cnt, cno,
-  	(select count(*) from tbl_reply r where r.bno = b.bno) replyCnt,
-	(select count(*) from tbl_attach a where a.bno = b.bno) attachCnt,
-	(select uuid from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) uuid,
-	(select path from tbl_attach a where a.bno = b.bno and image = 1 order by odr limit 1) path,
-  	grp, seq, depth
-  	from tbl_board b
-
-  	 WHERE cno = 2 
-
-  	order by grp desc, seq
-  	limit 10 offset 0
+12:05:35.413 [main] INFO  GhostFileCleanupJob - attachs : []
+12:05:35.415 [main] INFO  GhostFileCleanupJob - thumbs : []
+12:05:35.415 [main] INFO  GhostFileCleanupJob - attachs : []
+12:05:35.416 [main] INFO  GhostFileCleanupJob - dbListFiles : []
+12:05:35.427 [main] INFO  GhostFileCleanupJob - []
+12:05:56.293 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:05:56.295 [main] INFO  GhostFileCleanupJob - [77ac817d-9d43-48d9-8796-0abb60c889c1.xlsx, 819a43b5-8119-42ce-89ea-5b08f75a790c.jpg, t_819a43b5-8119-42ce-89ea-5b08f75a790c.jpg]
+12:05:56.953 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 6 msec}
+12:05:56.967 [main] INFO  GhostFileCleanupJob - attachs : []
+12:05:56.969 [main] INFO  GhostFileCleanupJob - thumbs : []
+12:05:56.970 [main] INFO  GhostFileCleanupJob - attachs : []
+12:05:56.970 [main] INFO  GhostFileCleanupJob - dbListFiles : []
+12:05:56.978 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\77ac817d-9d43-48d9-8796-0abb60c889c1.xlsx, d:\upload\files\2025\06\30\819a43b5-8119-42ce-89ea-5b08f75a790c.jpg, d:\upload\files\2025\06\30\t_819a43b5-8119-42ce-89ea-5b08f75a790c.jpg]
+12:13:56.181 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:13:56.184 [main] INFO  GhostFileCleanupJob - [77ac817d-9d43-48d9-8796-0abb60c889c1.xlsx, 819a43b5-8119-42ce-89ea-5b08f75a790c.jpg, t_819a43b5-8119-42ce-89ea-5b08f75a790c.jpg]
+12:13:57.304 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 465 msec}
+12:13:57.328 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:13:57.331 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:13:57.331 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:13:57.332 [main] INFO  GhostFileCleanupJob - dbListFiles : []
+12:13:57.340 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\77ac817d-9d43-48d9-8796-0abb60c889c1.xlsx, d:\upload\files\2025\06\30\819a43b5-8119-42ce-89ea-5b08f75a790c.jpg, d:\upload\files\2025\06\30\t_819a43b5-8119-42ce-89ea-5b08f75a790c.jpg]
+12:15:32.196 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:15:32.199 [main] INFO  GhostFileCleanupJob - [14f3a041-f389-4899-a713-840c221cf4c9.xlsx, 3cbe845e-cb17-47e6-83d2-459c4f2fe44d.json, 4d5e5894-df30-4561-b104-c41ff9226871.jpg, 767dd0d3-185c-404f-8c8b-626592774e04.jpg, f853f56c-c8cb-4917-ab7e-c86f1665602a.xlsx, t_4d5e5894-df30-4561-b104-c41ff9226871.jpg, t_767dd0d3-185c-404f-8c8b-626592774e04.jpg]
+12:15:32.847 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 21 msec}
+12:15:32.880 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:15:32.882 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:15:32.883 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:15:32.884 [main] INFO  GhostFileCleanupJob - dbListFiles : []
+12:15:32.896 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\14f3a041-f389-4899-a713-840c221cf4c9.xlsx, d:\upload\files\2025\06\30\3cbe845e-cb17-47e6-83d2-459c4f2fe44d.json, d:\upload\files\2025\06\30\4d5e5894-df30-4561-b104-c41ff9226871.jpg, d:\upload\files\2025\06\30\767dd0d3-185c-404f-8c8b-626592774e04.jpg, d:\upload\files\2025\06\30\f853f56c-c8cb-4917-ab7e-c86f1665602a.xlsx, d:\upload\files\2025\06\30\t_4d5e5894-df30-4561-b104-c41ff9226871.jpg, d:\upload\files\2025\06\30\t_767dd0d3-185c-404f-8c8b-626592774e04.jpg]
+12:16:22.120 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:16:22.122 [main] INFO  GhostFileCleanupJob - []
+12:16:22.790 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 14 msec}
+12:16:22.805 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:16:22.807 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:16:22.809 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:16:22.810 [main] INFO  GhostFileCleanupJob - dbListFiles : []
+12:16:22.820 [main] INFO  GhostFileCleanupJob - []
+12:16:56.484 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:16:56.487 [main] INFO  GhostFileCleanupJob - [55523d25-2dc2-4089-b25f-8d7c491d072d.xlsx, 96b2477e-8f56-47a1-b479-4ce17c9b163a.jpg, e9c5e5fa-f10c-45d2-be33-cfe67bc53d4f.sql, t_96b2477e-8f56-47a1-b479-4ce17c9b163a.jpg]
+12:16:57.139 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
  {executed in 7 msec}
-15:15:01.133 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.133 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.133 [main] INFO  BoardMapperTest - 2 0 [Attach(uuid=404af714-3773-414f-b62f-9334af384fc9.jpg, path=2025/06/30, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
-15:15:01.144 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.145 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.145 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.148 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.148 [main] INFO  BoardMapperTest - 0 0 []
-15:15:01.148 [main] INFO  BoardMapperTest - 3 0 [Attach(uuid=072111f0-d900-4b66-a4d2-29e7d416e4e9.jpg, path=2025/06/27, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
-15:15:01.148 [main] INFO  BoardMapperTest - 5 0 [Attach(uuid=fae5e549-d426-40c9-aa20-251bdc6e219e.png, path=2025/06/27, image=false, origin=null, bno=null, rno=null, odr=0, size=0)]
-15:15:01.178 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
-	from tbl_board b
-	left join tbl_attach a using(bno)
-	where bno = 4096
-	order by odr
+12:16:57.153 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:16:57.156 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:16:57.156 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:16:57.158 [main] INFO  GhostFileCleanupJob - dbListFiles : []
+12:16:57.171 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\55523d25-2dc2-4089-b25f-8d7c491d072d.xlsx, d:\upload\files\2025\06\30\96b2477e-8f56-47a1-b479-4ce17c9b163a.jpg, d:\upload\files\2025\06\30\e9c5e5fa-f10c-45d2-be33-cfe67bc53d4f.sql, d:\upload\files\2025\06\30\t_96b2477e-8f56-47a1-b479-4ce17c9b163a.jpg]
+12:20:39.228 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:20:39.231 [main] INFO  GhostFileCleanupJob - [761ef2ae-eb67-4d1b-b868-3e29e80a4514.jpg, f8015617-4a7d-41d4-810f-3b9297ad0fe4.xlsx, t_761ef2ae-eb67-4d1b-b868-3e29e80a4514.jpg]
+12:20:39.887 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
  {executed in 7 msec}
-15:15:01.183 [main] INFO  BoardMapperTest - Board(bno=4096, title=0626 몽요일몽, content=<p>몽요일이당</p>
-, id=qwe, regdate=2025-06-26 09:37:10, moddate=2025-06-26 09:37:10, cnt=16, cno=2, replyCnt=0, attachCnt=0, grp=4096, seq=1, depth=1, attachs=[Attach(uuid=342d7d88-37b4-4669-bb37-e13e2df0763f.jpg, path=2025/06/26, image=true, origin=다운로드 222.jpg, bno=4096, rno=null, odr=0, size=0), Attach(uuid=f63074f0-3633-468e-9362-323df2faf9dc.jpg, path=2025/06/26, image=true, origin=다운로드.jpg, bno=4096, rno=null, odr=1, size=0), Attach(uuid=bb3826b4-6987-4350-b5be-e4b2ac7d74ae, path=2025/06/26, image=false, origin=새 텍스트 문서, bno=4096, rno=null, odr=2, size=0)])
-15:15:01.223 [main] INFO  sqltiming - select *, a.bno a_bno, (select count(*) from tbl_reply r where r.bno = b.bno) replyCnt
-	from tbl_board b
-	left join tbl_attach a using(bno)
-	where bno = 50
-	order by odr
- {executed in 7 msec}
-15:15:01.232 [main] INFO  sqltiming - update tbl_board set
-  	title = '제목만 수정수정', 
-  	content = '술먹자 술~',
-  	moddate = now(),
-  	cno = 2
-  	where bno = 50
- {executed in 8 msec}
+12:20:39.902 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:20:39.904 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:20:39.905 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:20:39.905 [main] INFO  GhostFileCleanupJob - ==================dbListFiles================
+12:20:39.916 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\761ef2ae-eb67-4d1b-b868-3e29e80a4514.jpg, d:\upload\files\2025\06\30\f8015617-4a7d-41d4-810f-3b9297ad0fe4.xlsx, d:\upload\files\2025\06\30\t_761ef2ae-eb67-4d1b-b868-3e29e80a4514.jpg]
+12:23:50.997 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:23:51.000 [main] INFO  GhostFileCleanupJob - [3a124c55-ca60-471a-88f4-fb28cccd1b2f.jpg, b954ed0d-9913-4954-8d2f-601e82aa6047.xlsx, b96eb8ea-0a61-4eb1-8161-1d6207eecc04.jpg, e547807f-586f-475b-b559-163157d532e3.xlsx, t_3a124c55-ca60-471a-88f4-fb28cccd1b2f.jpg, t_b96eb8ea-0a61-4eb1-8161-1d6207eecc04.jpg]
+12:23:51.639 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 6 msec}
+12:23:51.654 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:23:51.656 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:23:51.657 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:23:51.657 [main] INFO  GhostFileCleanupJob - ==================dbListFiles================
+12:23:51.672 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\3a124c55-ca60-471a-88f4-fb28cccd1b2f.jpg, d:\upload\files\2025\06\30\b954ed0d-9913-4954-8d2f-601e82aa6047.xlsx, d:\upload\files\2025\06\30\b96eb8ea-0a61-4eb1-8161-1d6207eecc04.jpg, d:\upload\files\2025\06\30\e547807f-586f-475b-b559-163157d532e3.xlsx, d:\upload\files\2025\06\30\t_3a124c55-ca60-471a-88f4-fb28cccd1b2f.jpg, d:\upload\files\2025\06\30\t_b96eb8ea-0a61-4eb1-8161-1d6207eecc04.jpg]
+12:26:00.031 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:26:00.034 [main] INFO  GhostFileCleanupJob - [25287ed6-8ddb-4f88-a64c-8496d0abce1c.xlsx, 98a7e47a-b2eb-48dc-bb8f-2617357db5a3.jpg, ea0053b3-a6ee-4061-9215-de825a2761a7.xlsx, t_98a7e47a-b2eb-48dc-bb8f-2617357db5a3.jpg]
+12:26:00.690 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 6 msec}
+12:26:00.704 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:26:00.706 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:26:00.707 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:26:00.707 [main] INFO  GhostFileCleanupJob - ==================dbListFiles================
+12:26:00.714 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\25287ed6-8ddb-4f88-a64c-8496d0abce1c.xlsx, d:\upload\files\2025\06\30\98a7e47a-b2eb-48dc-bb8f-2617357db5a3.jpg, d:\upload\files\2025\06\30\ea0053b3-a6ee-4061-9215-de825a2761a7.xlsx, d:\upload\files\2025\06\30\t_98a7e47a-b2eb-48dc-bb8f-2617357db5a3.jpg]
+12:32:39.188 [main] INFO  GhostFileCleanupJob - d:\upload\files\2025\06\30, true
+12:32:39.191 [main] INFO  GhostFileCleanupJob - [792b7130-3ca3-474e-aeb5-5fcdacaac389.jpg, b778953e-a54d-4425-a85a-118d9b8cadc8.xlsx, d47a2392-4bb6-404a-b726-ca6d337c40fb.xlsx, t_792b7130-3ca3-474e-aeb5-5fcdacaac389.jpg]
+12:32:39.825 [main] INFO  sqltiming - select * from tbl_attach where path = DATE_FORMAT(DATE_SUB(now() ,INTERVAL 1 DAY), '%T/%m/%d')
+ {executed in 6 msec}
+12:32:39.840 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:32:39.842 [main] INFO  GhostFileCleanupJob - ==================thumbs================
+12:32:39.842 [main] INFO  GhostFileCleanupJob - ==================attachs================
+12:32:39.843 [main] INFO  GhostFileCleanupJob - ==================dbListFiles================
+12:32:39.856 [main] INFO  GhostFileCleanupJob - [d:\upload\files\2025\06\30\792b7130-3ca3-474e-aeb5-5fcdacaac389.jpg, d:\upload\files\2025\06\30\b778953e-a54d-4425-a85a-118d9b8cadc8.xlsx, d:\upload\files\2025\06\30\d47a2392-4bb6-404a-b726-ca6d337c40fb.xlsx, d:\upload\files\2025\06\30\t_792b7130-3ca3-474e-aeb5-5fcdacaac389.jpg]

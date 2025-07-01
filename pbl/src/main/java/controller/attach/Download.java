@@ -31,7 +31,7 @@ public class Download  extends HttpServlet{
 		log.info("{}","{}", "{}", uuid, origin, path);
 		
 		//물리적 위치에 있는 실제 파일을 origin의 네임으로 치환 후 다운로드
-		File file = new File(UPLOAD_PATH + "/" + path, uuid);
+		File file = new File(UploadFile.UPLOAD_PATH + "/" + path, uuid);
 		if(!file.exists()) {
 			resp.setContentType("text/html; charset=utf-8");
 			resp.getWriter().println("<h3>파일이 존재하지 않습니다</h3>");
